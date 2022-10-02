@@ -33,10 +33,13 @@ public class BubbleBehavior : BubbleManager
 
     private IEnumerator typingCoroutine;
 
+    [SerializeField] public AudioSource source;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        source = GetComponent<AudioSource>();
         image_displayed.alphaHitTestMinimumThreshold = 0.5f;
         dialogue_string = bubble_dialogue.text;
         bubble_dialogue.text = "";

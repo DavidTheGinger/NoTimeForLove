@@ -38,7 +38,8 @@ public class BubbleManager : MonoBehaviour
         foreach (BubbleBehavior b in bubble_behaviors)
         {
             b.talking = true;
-
+            b.source.pitch = Random.Range(0.85f, 1.4f);
+            b.source.PlayDelayed(Random.Range(0f, 0.2f));
         }
     }
 
