@@ -335,7 +335,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1342.12, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_SizeDelta: {x: 450, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &132919198
 Rigidbody2D:
@@ -497,6 +497,12 @@ MonoBehaviour:
   sprite_index: 0
   text_collider: {fileID: 132919199}
   target: {fileID: 0}
+  myNpc: {fileID: 0}
+  myNPC: {fileID: 0}
+  happyReaction: 45
+  lustReaction: 45
+  sadReaction: 45
+  angryReaction: 45
   spriteDelay: 13
   bubbleGrowthSpeed: 10
   talking: 0
@@ -566,8 +572,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.2229, y: 33.7113}
-  m_SizeDelta: {x: -101.5748, y: -329.8212}
+  m_AnchoredPosition: {x: -4.1500397, y: -3.7150116}
+  m_SizeDelta: {x: -74.29993, y: -242.56998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &232764384
 MonoBehaviour:
@@ -619,7 +625,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.2
+  m_fontSize: 22.6
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -766,8 +772,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.2229, y: 33.7113}
-  m_SizeDelta: {x: -101.5748, y: -329.8212}
+  m_AnchoredPosition: {x: -4.1500397, y: -3.7150116}
+  m_SizeDelta: {x: -74.29993, y: -242.56998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &297092842
 MonoBehaviour:
@@ -819,7 +825,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.2
+  m_fontSize: 22.6
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -989,6 +995,12 @@ MonoBehaviour:
   sprite_index: 0
   text_collider: {fileID: 424159793}
   target: {fileID: 0}
+  myNpc: {fileID: 0}
+  myNPC: {fileID: 0}
+  happyReaction: 45
+  lustReaction: 45
+  sadReaction: 45
+  angryReaction: 45
   spriteDelay: 13
   bubbleGrowthSpeed: 10
   talking: 0
@@ -1057,7 +1069,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1342.12, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_SizeDelta: {x: 450, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &424159796
 Rigidbody2D:
@@ -1243,7 +1255,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.2
+  m_fontSize: 22.6
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1310,8 +1322,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.2229, y: 33.7113}
-  m_SizeDelta: {x: -101.5748, y: -329.8212}
+  m_AnchoredPosition: {x: -4.1500397, y: -3.7150116}
+  m_SizeDelta: {x: -74.29993, y: -242.56998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &616577701
 GameObject:
@@ -1348,8 +1360,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.2229, y: 33.7113}
-  m_SizeDelta: {x: -101.5748, y: -329.8212}
+  m_AnchoredPosition: {x: -4.1500397, y: -3.7150116}
+  m_SizeDelta: {x: -74.29993, y: -242.56998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &616577703
 MonoBehaviour:
@@ -1401,7 +1413,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.2
+  m_fontSize: 22.6
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1524,7 +1536,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1342.12, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_SizeDelta: {x: 450, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &998859430
 Rigidbody2D:
@@ -1686,6 +1698,12 @@ MonoBehaviour:
   sprite_index: 0
   text_collider: {fileID: 998859431}
   target: {fileID: 0}
+  myNpc: {fileID: 0}
+  myNPC: {fileID: 0}
+  happyReaction: 45
+  lustReaction: 45
+  sadReaction: 45
+  angryReaction: 45
   spriteDelay: 13
   bubbleGrowthSpeed: 10
   talking: 0
@@ -1724,8 +1742,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.2229, y: 33.7113}
-  m_SizeDelta: {x: -101.5748, y: -329.8212}
+  m_AnchoredPosition: {x: -4.1500397, y: -3.7150116}
+  m_SizeDelta: {x: -74.29993, y: -242.56998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1019951073
 MonoBehaviour:
@@ -1777,7 +1795,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.2
+  m_fontSize: 22.6
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1893,8 +1911,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.2229, y: 33.7113}
-  m_SizeDelta: {x: -101.5748, y: -329.8212}
+  m_AnchoredPosition: {x: -4.1500397, y: -3.7150116}
+  m_SizeDelta: {x: -74.29993, y: -242.56998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1156153782
 MonoBehaviour:
@@ -1946,7 +1964,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.2
+  m_fontSize: 22.6
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2100,7 +2118,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1342.12, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_SizeDelta: {x: 450, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1255853710
 MonoBehaviour:
@@ -2225,6 +2243,12 @@ MonoBehaviour:
   sprite_index: 0
   text_collider: {fileID: 1255853716}
   target: {fileID: 0}
+  myNpc: {fileID: 0}
+  myNPC: {fileID: 0}
+  happyReaction: 45
+  lustReaction: 45
+  sadReaction: 45
+  angryReaction: 45
   spriteDelay: 13
   bubbleGrowthSpeed: 10
   talking: 0
@@ -2537,7 +2561,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1342.12, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_SizeDelta: {x: 450, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1627670615
 Rigidbody2D:
@@ -2699,6 +2723,12 @@ MonoBehaviour:
   sprite_index: 0
   text_collider: {fileID: 1627670616}
   target: {fileID: 0}
+  myNpc: {fileID: 0}
+  myNPC: {fileID: 0}
+  happyReaction: 45
+  lustReaction: 45
+  sadReaction: 45
+  angryReaction: 45
   spriteDelay: 13
   bubbleGrowthSpeed: 10
   talking: 0
@@ -2744,7 +2774,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1342.12, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_SizeDelta: {x: 450, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1641646650
 Rigidbody2D:
@@ -2906,6 +2936,12 @@ MonoBehaviour:
   sprite_index: 0
   text_collider: {fileID: 1641646651}
   target: {fileID: 0}
+  myNpc: {fileID: 0}
+  myNPC: {fileID: 0}
+  happyReaction: 45
+  lustReaction: 45
+  sadReaction: 45
+  angryReaction: 45
   spriteDelay: 13
   bubbleGrowthSpeed: 10
   talking: 0
