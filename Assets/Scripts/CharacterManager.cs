@@ -8,10 +8,12 @@ public class CharacterManager : MonoBehaviour
     [SerializeField] private AudioClip[] clips;
     private bool[] tracks;
 
+    [SerializeField] private NPC npc;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlayMusic();
     }
 
     // Update is called once per frame
@@ -35,6 +37,7 @@ public class CharacterManager : MonoBehaviour
     
     private void PlayMusic()
     {
+        tracks = npc.tracks;
         for(int i = 0; i < tracks.Length; i++)
         {
             if(tracks[i]) { source.PlayOneShot(clips[i]); }
