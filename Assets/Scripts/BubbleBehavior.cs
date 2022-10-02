@@ -31,6 +31,8 @@ public class BubbleBehavior : BubbleManager
     private float bubbleSize = 0f;
 
     public bool talking = false;
+    //FOR TUTORIAL ONLY
+    public bool finisehdDialogue = false;
 
     private IEnumerator typingCoroutine;
 
@@ -40,6 +42,7 @@ public class BubbleBehavior : BubbleManager
     // Start is called before the first frame update
     void Start()
     {
+        myButton = GetComponent<Button>();
         handScript = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<HandScript>();
         source = GetComponent<AudioSource>();
         image_displayed.alphaHitTestMinimumThreshold = 0.5f;
@@ -144,6 +147,7 @@ public class BubbleBehavior : BubbleManager
             bubble_dialogue.text += word + " ";
             yield return new WaitForSeconds(TextDelaySeconds * word.Length);
         }
+        finisehdDialogue = true;
     }
 
     IEnumerator SwitchSprite()

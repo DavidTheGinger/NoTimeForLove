@@ -6,6 +6,7 @@ public class NPC : MonoBehaviour
 {
 
     [SerializeField] private BubbleManager bubbleManager;
+    [SerializeField] private BubbleBehavior bubbleBehavior;
     [SerializeField] private List<Sprite> talkingSprites;
     [SerializeField] private Sprite neutralNpcSprite;
     [SerializeField] private Sprite happyNpcSprite;
@@ -44,6 +45,10 @@ public class NPC : MonoBehaviour
     {
         transform.position = spawn_point.transform.position;
         setTarget(chat_target);
+        if (tutorial)
+        {
+            bubbleBehavior = GameObject.FindGameObjectsWithTag("LongestText")[0].GetComponent<BubbleBehavior>();
+        }
     }
 
     private void FixedUpdate()
@@ -197,6 +202,10 @@ public class NPC : MonoBehaviour
         }
         else
         {
+            while (!bubbleBehavior.finisehdDialogue && !reacting)
+            {
+                yield return null;
+            }
             Wait();
         }
     }
