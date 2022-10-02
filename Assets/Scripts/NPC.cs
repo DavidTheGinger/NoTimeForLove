@@ -18,6 +18,8 @@ public class NPC : MonoBehaviour
     [SerializeField] private float silhouette_removal_speed = 1;
     [SerializeField] private float npc_movespeed = 5;
     [SerializeField] private float talkingDelay = .3f;
+    [SerializeField] private float pitch_min = 1;
+    [SerializeField] private float pitch_max = 1;
     [SerializeField] private GameObject spawn_point;
     [SerializeField] private GameObject chat_target;
     [SerializeField] private GameObject end_target;
@@ -28,6 +30,8 @@ public class NPC : MonoBehaviour
     private float journeyLength;
     private float startTime;
     private bool reacting = false;
+    [SerializeField] private float avgWordTime = .2f;
+    private float wordTimeVarianceMult = 1.2f;
 
     [SerializeField] private bool tutorial = false;
 
@@ -40,6 +44,8 @@ public class NPC : MonoBehaviour
     [SerializeField] public bool[] tracks;
     [SerializeField] private AudioClip[] talkSounds;
     [SerializeField] private AudioSource source;
+    [SerializeField] private float volumeBase = 1;
+    [SerializeField] private float volumeFadeSpeed = 10;
 
     private float nextTalkTime = 0;
     private int sprite_index = 0;
@@ -259,12 +265,38 @@ public class NPC : MonoBehaviour
             image_displayed.sprite = talkingSprites[sprite_index];
 
             int index = Random.Range(0, talkSounds.Length);
-            source.pitch = Random.Range(1.5f, 2.5f);
+            source.pitch = Random.Range(pitch_min, pitch_max);
             AudioClip clip = talkSounds[index];
             source.clip = clip;
+            /* play sounds based on when sounds finish
             nextTalkTime = Time.time + source.clip.length / source.pitch;
             source.PlayOneShot(talkSounds[index]);
+            */
+            //play sounds based on random interval, with interruptions
+            float delay = Random.Range(avgWordTime - (avgWordTime - avgWordTime * wordTimeVarianceMult), avgWordTime * wordTimeVarianceMult);
+            nextTalkTime = Time.time + delay;
+            source.PlayOneShot(talkSounds[index]);
+            //coroutine to QUICKLY fade out each audio clip to avoid audio popping
+            //StartCoroutine(PlayVoice(index, delay));
+            //End of interruptions on random interval
         }
+    }
+
+    IEnumerator PlayVoice(int index, float fadeoutTime)
+    {
+        while(source.volume > 0)
+        {
+            source.volume -= Time.deltaTime * volumeFadeSpeed;
+            if (source.volume < 0)
+            {
+                source.volume = 0;
+            }
+            yield return null;
+        }
+        source.Stop();
+        source.volume = volumeBase;
+        source.clip = talkSounds[index];
+        source.Play();
     }
 
 }

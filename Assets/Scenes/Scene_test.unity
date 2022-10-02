@@ -281,6 +281,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1bf2fad876aea1d4c8e626631ac0d141, type: 3}
   - {fileID: 8300000, guid: 67b10ada69fae26448dc4da21c180143, type: 3}
   - {fileID: 8300000, guid: ef0d3914d8db4ac4bbed898f4e61cc73, type: 3}
+  npc: {fileID: 0}
 --- !u!1 &301880843
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,6 +940,18 @@ PrefabInstance:
     - target: {fileID: 434792692092852607, guid: 5793567872a6432429b7452409f70e7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: pitch_max
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: pitch_min
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: volumeFadeSpeed
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
       propertyPath: talkSounds.Array.size
