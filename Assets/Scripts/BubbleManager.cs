@@ -1,0 +1,76 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BubbleManager : MonoBehaviour
+{
+    [SerializeField] protected float wpm = 200;
+    [SerializeField] protected float avg_word_len = 4.7f;
+    [SerializeField] protected float bubble_speed = 3f;
+    protected float TextDelaySeconds = 0f;
+    protected float startTime = 0f;
+    protected Vector3 startPositionCamSpace;
+
+    [SerializeField] protected List<Sprite> bubble_sprites;
+    [SerializeField] protected Camera cam;
+    [SerializeField] private List<BubbleBehavior> bubble_behaviors;
+    [SerializeField] private List<GameObject> targets;
+    [SerializeField] private GameObject mouth_obj;
+
+    void Awake()
+    {
+        initializeData();
+    }
+
+
+    public void initializeData()
+    {
+        TextDelaySeconds = 1 / (wpm / 60f) / avg_word_len;
+        startTime = Time.time;
+        startPositionCamSpace = cam.WorldToScreenPoint(mouth_obj.transform.position);
+        randomizeList(targets);
+    }
+
+    public void beginTalking()
+    {
+
+        setInitialBubblePositions();
+        foreach (BubbleBehavior b in bubble_behaviors)
+        {
+            b.talking = true;
+
+        }
+    }
+
+    private void setInitialBubblePositions()
+    {
+        Debug.Log("BubbleManager: setInitialBubblePositions");
+        int i = 0;
+        foreach (BubbleBehavior b in bubble_behaviors)
+        {
+            b.gameObject.transform.position = cam.WorldToScreenPoint(mouth_obj.transform.position);
+            b.setTarget(targets[i]);
+            i = i < (targets.Count - 1) ? i + 1 : 0;
+        }
+    }
+
+    private void randomizeList<T>(List<T> list)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            T temp = list[i];
+            int randomIndex = Random.Range(i, list.Count);
+            list[i] = list[randomIndex];
+            list[randomIndex] = temp;
+        }
+    }
+
+    public void CleanupBubbles()
+    {
+        foreach (BubbleBehavior b in bubble_behaviors)
+        {
+            Destroy(b.gameObject);
+        }
+        Destroy(gameObject);
+    }
+}

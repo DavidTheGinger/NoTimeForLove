@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class BubbleBehavior : NPC
+public class BubbleBehavior : BubbleManager
 {
 
     [SerializeField] private string dialogue_string;
@@ -14,7 +14,22 @@ public class BubbleBehavior : NPC
     [SerializeField] private Collider2D text_collider;
     [SerializeField] private GameObject target;
 
+    [SerializeField] private NPC myNpc;
+    [SerializeField] private GameObject myNPC;
+
+    // - is neutral, h is happy, n is negative
+    [SerializeField] private char happyReaction = '-';
+    [SerializeField] private char lustReaction = '-';
+    [SerializeField] private char sadReaction = '-';
+    [SerializeField] private char angryReaction = '-';
+
+    [SerializeField] private float spriteDelay =13;
+    [SerializeField] private float bubbleGrowthSpeed = 10; 
     private float journeyLength;
+    private float bubbleSize = 0f;
+
+    public bool talking = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +38,7 @@ public class BubbleBehavior : NPC
         dialogue_string = bubble_dialogue.text;
         bubble_dialogue.text = "";
         sprite_index = Random.Range(0, bubble_sprites.Count - 1);
-
+        spriteDelay = Random.Range(spriteDelay - 2, spriteDelay + 2);
 
         DisplayText();
         StartCoroutine(SwitchSprite());
@@ -32,7 +47,15 @@ public class BubbleBehavior : NPC
     // Update is called once per frame
     void FixedUpdate()
     {
-        moveTowardsTarget();
+        if (talking)
+        {
+            moveTowardsTarget();
+            if (bubbleSize < 1)
+            {
+                growBubbles();
+            }
+        }
+        
     }
 
     public void DisplayText()
@@ -59,21 +82,29 @@ public class BubbleBehavior : NPC
 
         // Set our position as a fraction of the distance between the markers.
         transform.position = Vector3.Lerp(transform.position, cam.WorldToScreenPoint(target.transform.position), fractionOfJourney);
-        transform.localScale = Vector3.Lerp(Vector3.zero, 1.5f*Vector3.one, fractionOfJourney*2);
+        
         // Debug.Log("distCovered: " + distCovered);
         // Debug.Log("fractionOfJourney: " + fractionOfJourney);
         // Debug.Log("JourneyLength: " + journeyLength);
     }
-
+    private void growBubbles()
+    {
+        bubbleSize = bubbleSize + Time.deltaTime * bubbleGrowthSpeed;
+        if (bubbleSize > 1)
+        {
+            bubbleSize = 1;
+        }
+        transform.localScale = new Vector3(bubbleSize,bubbleSize,bubbleSize);
+    }
 
     IEnumerator TypeDialogue (string dialogue)
     {
         bubble_dialogue.text = "";
-        foreach(char letter in dialogue.ToCharArray())
+        foreach(string word in dialogue.Split(' '))
         {
             
-            bubble_dialogue.text += letter;
-            yield return new WaitForSeconds(TextDelaySeconds);
+            bubble_dialogue.text += word + " ";
+            yield return new WaitForSeconds(TextDelaySeconds * word.Length);
         }
     }
 
@@ -83,9 +114,11 @@ public class BubbleBehavior : NPC
         {
             sprite_index = sprite_index < bubble_sprites.Count - 1 ? sprite_index + 1 : 0;
             image_displayed.sprite = bubble_sprites[sprite_index];
-            yield return new WaitForSeconds(SpriteDelay * TextDelaySeconds);
+            yield return new WaitForSeconds(spriteDelay * TextDelaySeconds);
         }
         
 
     }
+
+
 }
