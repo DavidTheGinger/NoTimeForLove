@@ -943,15 +943,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
       propertyPath: pitch_max
-      value: 0.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
       propertyPath: pitch_min
-      value: 0.7
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: volumeBase
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: avgWordTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkingDelay
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
       propertyPath: volumeFadeSpeed
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
       propertyPath: talkSounds.Array.size
@@ -960,35 +972,35 @@ PrefabInstance:
     - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
       propertyPath: talkSounds.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 77090962cf3bd0d48afcfc714a849879, type: 3}
+      objectReference: {fileID: 8300000, guid: e6e33580528b62746812954028c253e7, type: 3}
     - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
       propertyPath: talkSounds.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 640d218f18b01bc43a94b25ad97ac4b3, type: 3}
+      objectReference: {fileID: 8300000, guid: 66ca90f5a3a6b204b85ff7c33f1d38b9, type: 3}
     - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
       propertyPath: talkSounds.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: 18a7c31f44d1747419e7abadfdd607ca, type: 3}
+      objectReference: {fileID: 8300000, guid: e934726e1b4582d4086deab38abe6cea, type: 3}
     - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
       propertyPath: talkSounds.Array.data[3]
       value: 
-      objectReference: {fileID: 8300000, guid: 26601563778f2c244a03619e0f6101b5, type: 3}
+      objectReference: {fileID: 8300000, guid: a82206e3c586f3d4cb0607e2273b3bdd, type: 3}
     - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
       propertyPath: talkSounds.Array.data[4]
       value: 
-      objectReference: {fileID: 8300000, guid: 531c67da14391b840bcb1a50404c384a, type: 3}
+      objectReference: {fileID: 8300000, guid: 23852886a39fa3148a277eef41cfc98b, type: 3}
     - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
       propertyPath: talkSounds.Array.data[5]
       value: 
-      objectReference: {fileID: 8300000, guid: 1edf7c88142308d4a9e8e9b199465e21, type: 3}
+      objectReference: {fileID: 8300000, guid: bee9eca20193e5141818bc3e00080117, type: 3}
     - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
       propertyPath: talkSounds.Array.data[6]
       value: 
-      objectReference: {fileID: 8300000, guid: b7acbfffd86ae2f4fa2165d4ffa38849, type: 3}
+      objectReference: {fileID: 8300000, guid: 449f56c3630cc8c44ac7c751729e1a9e, type: 3}
     - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
       propertyPath: talkSounds.Array.data[7]
       value: 
-      objectReference: {fileID: 8300000, guid: 1fc459d3829065f4090d34d9f6a0fdf1, type: 3}
+      objectReference: {fileID: 8300000, guid: f598e100738d48942ac16aee1db68f7c, type: 3}
     - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
       propertyPath: talkSounds.Array.data[8]
       value: 

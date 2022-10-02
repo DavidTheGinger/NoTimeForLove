@@ -2915,11 +2915,29 @@ MonoBehaviour:
   end_target: {fileID: 434792690682020242}
   particles: {fileID: 4952110978724452839}
   image_displayed: {fileID: 434792692440813981}
+  avgWordTime: 0.2
   tutorial: 1
   tracks: 000000000000000001010100
-  talkSounds: []
+  talkSounds:
+  - {fileID: 8300000, guid: e6e33580528b62746812954028c253e7, type: 3}
+  - {fileID: 8300000, guid: 66ca90f5a3a6b204b85ff7c33f1d38b9, type: 3}
+  - {fileID: 8300000, guid: e934726e1b4582d4086deab38abe6cea, type: 3}
+  - {fileID: 8300000, guid: a82206e3c586f3d4cb0607e2273b3bdd, type: 3}
+  - {fileID: 8300000, guid: 23852886a39fa3148a277eef41cfc98b, type: 3}
+  - {fileID: 8300000, guid: bee9eca20193e5141818bc3e00080117, type: 3}
+  - {fileID: 8300000, guid: 449f56c3630cc8c44ac7c751729e1a9e, type: 3}
+  - {fileID: 8300000, guid: f598e100738d48942ac16aee1db68f7c, type: 3}
+  - {fileID: 8300000, guid: 25395504e2863c048b8ff7b2def8bd48, type: 3}
+  - {fileID: 8300000, guid: a26f71072cd2e6e4e97e82e0eda099e2, type: 3}
+  - {fileID: 8300000, guid: 73ab71e9483f1d5458e5e2a7f1a622c4, type: 3}
+  - {fileID: 8300000, guid: 9f1903f2dcbb39342946daaf4fe1bafb, type: 3}
+  - {fileID: 8300000, guid: e3d0acc31a08c974f88e24e77a4b27c3, type: 3}
+  - {fileID: 8300000, guid: 646744189303958469106b64d10996ef, type: 3}
+  - {fileID: 8300000, guid: 5deef2ef34d362a4cb4ed56d0865222b, type: 3}
+  - {fileID: 8300000, guid: fadda73a2ec3fe64d93501ea1476e9a1, type: 3}
   source: {fileID: 3958129706668502007}
   volumeBase: 1
+  volumeFadeSpeed: 10
 --- !u!114 &434792692440813982
 MonoBehaviour:
   m_ObjectHideFlags: 0

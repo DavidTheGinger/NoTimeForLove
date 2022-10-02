@@ -273,9 +273,10 @@ public class NPC : MonoBehaviour
             source.PlayOneShot(talkSounds[index]);
             */
             //play sounds based on random interval, with interruptions
-            float delay = Random.Range(avgWordTime - (avgWordTime - avgWordTime * wordTimeVarianceMult), avgWordTime * wordTimeVarianceMult);
+            float delay = Mathf.Min(source.clip.length / source.pitch, Random.Range(avgWordTime - (avgWordTime - avgWordTime * wordTimeVarianceMult), avgWordTime * wordTimeVarianceMult));
             nextTalkTime = Time.time + delay;
-            source.PlayOneShot(talkSounds[index]);
+            if(Random.Range(0, 2) == 1) { source.pitch *= -1; }
+            source.PlayOneShot(talkSounds[index], volumeBase);
             //coroutine to QUICKLY fade out each audio clip to avoid audio popping
             //StartCoroutine(PlayVoice(index, delay));
             //End of interruptions on random interval
