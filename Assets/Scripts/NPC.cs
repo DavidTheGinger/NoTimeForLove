@@ -66,7 +66,10 @@ public class NPC : MonoBehaviour
                 }
                 break;
             case NpcState.talking:
-                Talk();
+                if (!reacting)
+                {
+                    Talk();
+                }
                 if (tutorial)
                 {
 
