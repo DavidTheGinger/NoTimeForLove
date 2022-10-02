@@ -816,6 +816,78 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkSounds.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 77090962cf3bd0d48afcfc714a849879, type: 3}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 640d218f18b01bc43a94b25ad97ac4b3, type: 3}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 18a7c31f44d1747419e7abadfdd607ca, type: 3}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 26601563778f2c244a03619e0f6101b5, type: 3}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 531c67da14391b840bcb1a50404c384a, type: 3}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkSounds.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1edf7c88142308d4a9e8e9b199465e21, type: 3}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkSounds.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: b7acbfffd86ae2f4fa2165d4ffa38849, type: 3}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkSounds.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1fc459d3829065f4090d34d9f6a0fdf1, type: 3}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkSounds.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f82ded0ac87b7f40a09ca1bdbecd1f8, type: 3}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkSounds.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: fa02b866a9431744d97c4666eb8cd27e, type: 3}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkSounds.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: 41440765434cb5d428c43e830fee9e7d, type: 3}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkSounds.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3cff640f497f99749a32de8ad53593b5, type: 3}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkSounds.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: 56c1d06a07f6e904fbc05ed9b37a5618, type: 3}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkSounds.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5bec23de11ca3104e9c2324b135bdb4b, type: 3}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkSounds.Array.data[14]
+      value: 
+      objectReference: {fileID: 8300000, guid: a970239ca1fc561479aea58ced5d8a29, type: 3}
+    - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: talkSounds.Array.data[15]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2ae7f8a4db3dac541a6453c217eea050, type: 3}
+    - target: {fileID: 3958129706668502007, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5793567872a6432429b7452409f70e7f, type: 3}
 --- !u!114 &699864432 stripped
@@ -1654,6 +1726,14 @@ PrefabInstance:
     - target: {fileID: 4337421318624270647, guid: 02177dc7eecb21e49bad9e0c7ac2d844, type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7099358495280916377, guid: 02177dc7eecb21e49bad9e0c7ac2d844, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cbc0720e2e94c6488f4d7f7b0d7e626, type: 3}
+    - target: {fileID: 7099358495280916377, guid: 02177dc7eecb21e49bad9e0c7ac2d844, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8026296781928956956, guid: 02177dc7eecb21e49bad9e0c7ac2d844, type: 3}
       propertyPath: m_RootOrder

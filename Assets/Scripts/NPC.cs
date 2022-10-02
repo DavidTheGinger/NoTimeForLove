@@ -42,6 +42,9 @@ public class NPC : MonoBehaviour
     [SerializeField] private AudioClip[] talkSounds;
     [SerializeField] private AudioSource source;
 
+    private float nextTalkTime = 0;
+    private int sprite_index = 0;
+
     void Awake()
     {
         transform.position = spawn_point.transform.position;
@@ -225,8 +228,8 @@ public class NPC : MonoBehaviour
         while((npcState == NpcState.talking || npcState == NpcState.leaving) && !reacting)
         {
             //Debug.Log("sprite index: " + sprite_index);
-            sprite_index = sprite_index < talkingSprites.Count - 1 ? sprite_index + 1 : 0;
-            image_displayed.sprite = talkingSprites[sprite_index];
+            // sprite_index = sprite_index < talkingSprites.Count - 1 ? sprite_index + 1 : 0;
+            //image_displayed.sprite = talkingSprites[sprite_index];
             yield return new WaitForSeconds(talkingDelay);
         }
         if (!reacting)
@@ -257,8 +260,18 @@ public class NPC : MonoBehaviour
 
     private void Talk()
     {
-        int index = Random.Range(0, talkSounds.Length);
-        
+        if(nextTalkTime < Time.time)
+        {
+            sprite_index = sprite_index < talkingSprites.Count - 1 ? sprite_index + 1 : 0;
+            image_displayed.sprite = talkingSprites[sprite_index];
+
+            int index = Random.Range(0, talkSounds.Length);
+            source.pitch = Random.Range(1.5f, 2.5f);
+            AudioClip clip = talkSounds[index];
+            source.clip = clip;
+            nextTalkTime = Time.time + source.clip.length / source.pitch;
+            source.PlayOneShot(talkSounds[index]);
+        }
     }
 
 }
