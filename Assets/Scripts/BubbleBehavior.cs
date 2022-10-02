@@ -7,7 +7,6 @@ public class BubbleBehavior : BubbleManager
 {
 
     [SerializeField] private string dialogue_string;
-
     [SerializeField] private TextMeshProUGUI bubble_dialogue;
     [SerializeField] private Image image_displayed;
     [SerializeField] private int sprite_index = 0;
@@ -15,7 +14,7 @@ public class BubbleBehavior : BubbleManager
     [SerializeField] private GameObject target;
 
     [SerializeField] private NPC myNpc;
-    [SerializeField] private GameObject myNPC;
+    [SerializeField] private HandScript handScript;
 
     // - is neutral, h is happy, n is negative
     [SerializeField] private char happyReaction = '-';
@@ -23,12 +22,16 @@ public class BubbleBehavior : BubbleManager
     [SerializeField] private char sadReaction = '-';
     [SerializeField] private char angryReaction = '-';
 
+    
+
     [SerializeField] private float spriteDelay =13;
     [SerializeField] private float bubbleGrowthSpeed = 10; 
     private float journeyLength;
     private float bubbleSize = 0f;
 
     public bool talking = false;
+
+    private IEnumerator typingCoroutine;
 
 
     // Start is called before the first frame update
@@ -60,7 +63,8 @@ public class BubbleBehavior : BubbleManager
 
     public void DisplayText()
     {
-        StartCoroutine(TypeDialogue(dialogue_string));
+        typingCoroutine = TypeDialogue(dialogue_string);
+        StartCoroutine(typingCoroutine);
     }
 
     public void setTarget(GameObject target_temp)
@@ -95,6 +99,33 @@ public class BubbleBehavior : BubbleManager
             bubbleSize = 1;
         }
         transform.localScale = new Vector3(bubbleSize,bubbleSize,bubbleSize);
+    }
+
+    public void ReacToReaction()
+    {
+        Debug.Log("A textbox has been chosen while '" + handScript.emojiHeld + "' was being held");
+        switch (handScript.emojiHeld)
+        {
+            case HandScript.EmojiHeld.lust:
+                myNpc.React(lustReaction);
+                break;
+            case HandScript.EmojiHeld.happy:
+                myNpc.React(happyReaction);
+                break;
+            case HandScript.EmojiHeld.sad:
+                myNpc.React(sadReaction);
+                break;
+            case HandScript.EmojiHeld.angry:
+                myNpc.React(angryReaction);
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void Shuddup()
+    {
+        StopCoroutine(typingCoroutine);
     }
 
     IEnumerator TypeDialogue (string dialogue)

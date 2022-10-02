@@ -10,9 +10,9 @@ public class NPC : MonoBehaviour
     [SerializeField] private Sprite neutralNpcSprite;
     [SerializeField] private Sprite happyNpcSprite;
     [SerializeField] private Sprite negativeNpcSprite;
-    [SerializeField] private Sprite neutralEmojiSprite;
-    [SerializeField] private Sprite happyEmojiSprite;
-    [SerializeField] private Sprite negativeEmojiSprite;
+    [SerializeField] private Sprite neutralEmojiParticle;
+    [SerializeField] private Sprite happyEmojiParticle;
+    [SerializeField] private Sprite negativeEmojiParticle;
     [SerializeField] private SpriteRenderer silhouette;
     [SerializeField] private float silhouette_removal_speed = 1;
     [SerializeField] private float npc_movespeed = 5;
@@ -21,7 +21,7 @@ public class NPC : MonoBehaviour
     [SerializeField] private GameObject chat_target;
     [SerializeField] private GameObject end_target;
 
-
+    [SerializeField] private ParticleSystem particles;
     [SerializeField] private SpriteRenderer image_displayed;
     GameObject target;
     private float journeyLength;
@@ -117,21 +117,26 @@ public class NPC : MonoBehaviour
 
     public void React(char char_reaction)
     {
+        Debug.Log("I, the NPC, am about to react to '" + char_reaction + "' reaction input");
         switch (char_reaction)
         {
+            
             case 'h':
+                Debug.Log("I, the NPC, have reacted happily");
                 reaction = Reactions.happy;
-                ActivateReactionParticles(happyEmojiSprite);
+                ActivateReactionParticles(happyEmojiParticle);
                 image_displayed.sprite = happyNpcSprite;
                 break;
             case 'n':
+                Debug.Log("I, the NPC, have reacted negativly");
                 reaction = Reactions.negative;
-                ActivateReactionParticles(negativeEmojiSprite);
+                ActivateReactionParticles(negativeEmojiParticle);
                 image_displayed.sprite = negativeNpcSprite;
                 break;
             default:
+                Debug.Log("I, the NPC, have reacted neutrally");
                 reaction = Reactions.neutral;
-                ActivateReactionParticles(neutralEmojiSprite);
+                ActivateReactionParticles(neutralEmojiParticle);
                 image_displayed.sprite = neutralNpcSprite;
                 break;
 
@@ -139,9 +144,11 @@ public class NPC : MonoBehaviour
         reacting = true;
     }
 
-    private void ActivateReactionParticles(Sprite particle_sprite)
+    private void ActivateReactionParticles(Sprite particle)
     {
-
+        particles.Clear();
+        particles.textureSheetAnimation.SetSprite(0, particle);
+        particles.Play();
     }
 
     private void moveTowardsTarget()
@@ -201,9 +208,9 @@ public class NPC : MonoBehaviour
     IEnumerator TalkSpriteUpdater()
     {
         int sprite_index = 0;
-        while(npcState == NpcState.talking && !reacting)
+        while((npcState == NpcState.talking || npcState == NpcState.leaving) && !reacting)
         {
-            Debug.Log("sprite index: " + sprite_index);
+            //Debug.Log("sprite index: " + sprite_index);
             sprite_index = sprite_index < talkingSprites.Count - 1 ? sprite_index + 1 : 0;
             image_displayed.sprite = talkingSprites[sprite_index];
             yield return new WaitForSeconds(talkingDelay);
@@ -211,6 +218,10 @@ public class NPC : MonoBehaviour
         if (!reacting)
         {
             image_displayed.sprite = talkingSprites[0];
+        }
+        else
+        {
+            bubbleManager.StopTalking();
         }
 
     }

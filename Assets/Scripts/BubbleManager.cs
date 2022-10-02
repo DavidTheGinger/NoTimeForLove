@@ -65,6 +65,14 @@ public class BubbleManager : MonoBehaviour
         }
     }
 
+    public void StopTalking()
+    {
+        foreach (BubbleBehavior b in bubble_behaviors)
+        {
+            b.Shuddup();
+        }
+    }
+
     public void CleanupBubbles()
     {
         foreach (BubbleBehavior b in bubble_behaviors)
