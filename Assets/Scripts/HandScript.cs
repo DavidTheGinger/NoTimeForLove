@@ -14,10 +14,9 @@ public class HandScript : MonoBehaviour
     [SerializeField] private float hand_speed = 1;
 
     //to be set by the overall game manager
-    public GameObject currentNpc;
     public Camera cam;
 
-    private GameObject emojiSticker;
+    public GameObject emojiSticker;
     private float journeyLength = 0;
 
     // Start is called before the first frame update
@@ -29,53 +28,73 @@ public class HandScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        journeyLength = Vector3.Distance(transform.position, cam.ScreenToWorldPoint(Input.mousePosition)); 
+        //journeyLength = Vector3.Distance(transform.position, Input.mousePosition); 
         // Distance moved equals elapsed time times speed..
-        float distCovered = (Time.time - 1) * hand_speed;
+        //float distCovered = (Time.time - 1) * hand_speed;
 
         // Fraction of journey completed equals current distance divided by total distance.
-        float fractionOfJourney = distCovered / journeyLength;
+       // float fractionOfJourney = distCovered / journeyLength;
 
         // Set our position as a fraction of the distance between the markers.
-        transform.position = Vector3.Lerp(transform.position, cam.ScreenToWorldPoint(Input.mousePosition), fractionOfJourney);
+        //transform.position = Vector3.Lerp(transform.position, Input.mousePosition, fractionOfJourney);
+        transform.position = Input.mousePosition;
     }
 
     private void PickupEmoji(GameObject emoji)
     {
         emojiSticker = Instantiate(emoji);
-        emojiSticker.transform.position = cam.ScreenToWorldPoint(Input.mousePosition);
+        emojiSticker.transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
+
         emojiSticker.transform.SetParent(gameObject.transform, true);
     }
 
-    public void PlaceEmoji()
+    public void PlaceEmoji(Transform buttonTransform)
     {
-        emojiSticker.transform.SetParent(currentNpc.transform, true);
+        emojiSticker.transform.SetParent(buttonTransform, true);
         EmptyHand();
     }
 
     public void HoldHappy()
     {
+        CheckIfAlreadyHolding();
         emojiHeld = EmojiHeld.happy;
         PickupEmoji(emojiHappyPrefab);
+        Debug.Log("Current Held Emoji sticker obj: " + emojiSticker.name);
     }
     public void HoldLust()
     {
+        CheckIfAlreadyHolding();
         emojiHeld = EmojiHeld.lust;
         PickupEmoji(emojiLustPrefab);
+        Debug.Log("Current Held Emoji sticker obj: " + emojiSticker.name);
     }
     public void HoldSad()
     {
+        CheckIfAlreadyHolding();
         emojiHeld = EmojiHeld.sad;
         PickupEmoji(emojiSadPrefab);
+        Debug.Log("Current Held Emoji sticker obj: " + emojiSticker.name);
     }
     public void HoldAngry()
     {
+        CheckIfAlreadyHolding();
         emojiHeld = EmojiHeld.angry;
         PickupEmoji(emojiAngryPrefab);
+        Debug.Log("Current Held Emoji sticker obj: " + emojiSticker.name);
     }
 
     public void EmptyHand()
     {
+        emojiSticker = null;
         emojiHeld = EmojiHeld.none;
+    }
+
+    private void CheckIfAlreadyHolding()
+    {
+        if(emojiSticker != null)
+        {
+            Destroy(emojiSticker);
+            emojiSticker = null;
+        }
     }
 }
