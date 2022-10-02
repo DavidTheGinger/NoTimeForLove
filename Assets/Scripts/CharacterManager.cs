@@ -15,4 +15,14 @@ public class CharacterManager : MonoBehaviour
     {
         
     }
+
+    void Play()
+    {
+        NextNPC();
+    }
+
+    void NextNPC()
+    {
+
+    }
 }

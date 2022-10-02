@@ -36,6 +36,8 @@ public class NPC : MonoBehaviour
     enum Reactions { neutral, happy, negative}
     Reactions reaction = Reactions.neutral;
 
+    [SerializeField] private bool[] tracks;
+
     void Awake()
     {
         transform.position = spawn_point.transform.position;
