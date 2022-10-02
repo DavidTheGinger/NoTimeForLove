@@ -8,6 +8,7 @@ TagManager:
   - AudioManager
   - CharacterManager
   - FadeMask
+  - MockSceneParent
   layers:
   - Default
   - TransparentFX

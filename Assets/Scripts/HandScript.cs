@@ -8,6 +8,7 @@ public class HandScript : MonoBehaviour
     public GameObject emojiAngryPrefab;
     public GameObject emojiLustPrefab;
     public GameObject emojiSadPrefab;
+    public GameObject canvas;
     public enum EmojiHeld {none, lust, happy, sad, angry }
     public EmojiHeld emojiHeld = EmojiHeld.none;
 
@@ -38,18 +39,29 @@ public class HandScript : MonoBehaviour
         // Set our position as a fraction of the distance between the markers.
         //transform.position = Vector3.Lerp(transform.position, Input.mousePosition, fractionOfJourney);
         transform.position = Input.mousePosition;
+        if(emojiSticker != null)
+        {
+            emojiSticker.transform.position = transform.position;
+        }
     }
 
     private void PickupEmoji(GameObject emoji)
     {
         emojiSticker = Instantiate(emoji);
-        emojiSticker.transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
+        emojiSticker.transform.SetParent(canvas.transform, true);
+        emojiSticker.transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, -100);
 
-        emojiSticker.transform.SetParent(gameObject.transform, true);
+        //emojiSticker.transform.SetParent(gameObject.transform, true);
+        emojiSticker.transform.SetParent(canvas.transform, true);
+
     }
 
     public void PlaceEmoji(Transform buttonTransform)
     {
+        if(emojiHeld == EmojiHeld.none)
+        {
+            return;
+        }
         emojiSticker.transform.SetParent(buttonTransform, true);
         GetComponent<AudioSource>().Play();
         EmptyHand();

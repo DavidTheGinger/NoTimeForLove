@@ -52,12 +52,21 @@ public class NPC : MonoBehaviour
     private float nextTalkTime = 0;
     private int sprite_index = 0;
 
+    private CharacterManager characterManager;
+
+    private GameObject mockSceneParent;
+
     private void Awake()
     {
+        characterManager = GameObject.FindGameObjectWithTag("CharacterManager").GetComponent<CharacterManager>();
+        mockSceneParent = GameObject.FindGameObjectWithTag("MockSceneParent");
         if (tutorial)
         {
             bubbleBehavior = GameObject.FindGameObjectWithTag("LongestText").GetComponent<BubbleBehavior>();
         }
+
+        transform.parent.parent = mockSceneParent.transform;
+        transform.SetAsFirstSibling();
     }
 
     void Start()
@@ -261,6 +270,7 @@ public class NPC : MonoBehaviour
     private void CleanupNPC()
     {
         bubbleManager.CleanupBubbles();
+        characterManager.MoveOnFromNpc();
         Destroy(gameObject);
     }
 
