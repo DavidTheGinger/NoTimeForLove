@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BubbleManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class BubbleManager : MonoBehaviour
     [SerializeField] private List<BubbleBehavior> bubble_behaviors;
     [SerializeField] private List<GameObject> targets;
     [SerializeField] private GameObject mouth_obj;
+    public TMP_FontAsset font;
 
     void Awake()
     {
@@ -53,6 +55,12 @@ public class BubbleManager : MonoBehaviour
             b.gameObject.transform.position = cam.WorldToScreenPoint(mouth_obj.transform.position);
             b.setTarget(targets[i]);
             i = i < (targets.Count - 1) ? i + 1 : 0;
+
+            //set the bubble's font while we're at it
+            if(font != null)
+            {
+                b.bubble_dialogue.font = font;
+            }
         }
     }
 

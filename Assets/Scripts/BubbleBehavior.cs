@@ -7,7 +7,7 @@ public class BubbleBehavior : BubbleManager
 {
 
     [SerializeField] private string dialogue_string;
-    [SerializeField] private TextMeshProUGUI bubble_dialogue;
+    [SerializeField] public TextMeshProUGUI bubble_dialogue;
     [SerializeField] private Button myButton;
     [SerializeField] private Image image_displayed;
     [SerializeField] private int sprite_index = 0;
