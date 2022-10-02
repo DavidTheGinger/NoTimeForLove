@@ -40,8 +40,8 @@ public class NPC : MonoBehaviour
     public enum NpcState { entering, talking, leaving, waiting}
     NpcState npcState = NpcState.entering;
 
-    enum Reactions { neutral, happy, negative}
-    Reactions reaction = Reactions.neutral;
+    public enum Reactions { neutral, happy, negative}
+    public Reactions reaction = Reactions.neutral;
 
     [SerializeField] public bool[] tracks;
     [SerializeField] private AudioClip[] talkSounds;
@@ -271,7 +271,7 @@ public class NPC : MonoBehaviour
     {
         bubbleManager.CleanupBubbles();
         characterManager.MoveOnFromNpc();
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 
     private void Talk()
