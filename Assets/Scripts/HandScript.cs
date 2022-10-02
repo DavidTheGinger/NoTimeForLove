@@ -51,6 +51,7 @@ public class HandScript : MonoBehaviour
     public void PlaceEmoji(Transform buttonTransform)
     {
         emojiSticker.transform.SetParent(buttonTransform, true);
+        GetComponent<AudioSource>().Play();
         EmptyHand();
     }
 
