@@ -37,6 +37,8 @@ public class NPC : MonoBehaviour
     Reactions reaction = Reactions.neutral;
 
     [SerializeField] private bool[] tracks;
+    [SerializeField] private AudioClip[] clips;
+    [SerializeField] private AudioSource source;
 
     void Awake()
     {
@@ -187,6 +189,7 @@ public class NPC : MonoBehaviour
 
     IEnumerator TalkTimer()
     {
+        PlayMusic();
         yield return new WaitForSeconds(10);
         if (!tutorial)
         {
@@ -231,6 +234,14 @@ public class NPC : MonoBehaviour
     {
         bubbleManager.CleanupBubbles();
         Destroy(gameObject);
+    }
+
+    private void PlayMusic()
+    {
+        for(int i = 0; i < tracks.Length; i++)
+        {
+            if(tracks[i]) { source.PlayOneShot(clips[i]); }
+        }
     }
 
 
