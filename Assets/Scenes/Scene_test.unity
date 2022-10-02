@@ -928,6 +928,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 434792692440813982, guid: 5793567872a6432429b7452409f70e7f, type: 3}
+      propertyPath: font
+      value: 
+      objectReference: {fileID: 11400000, guid: e06f27ce62461fd4f88d17d51fedb276, type: 2}
     - target: {fileID: 434792692440813983, guid: 5793567872a6432429b7452409f70e7f, type: 3}
       propertyPath: pitch_max
       value: 0.8

@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: c77bb5afe1c220a4e87b1f2fdb5e0385
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Shantell Sans Bouncy
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 947324524dcf3a947a119a34144a077c, type: 3}
+  - {fileID: 12800000, guid: b3022181693528c4ba80416946b35c37, type: 3}
+  - {fileID: 12800000, guid: 848fc0ae40aeda542a707670efb0525b, type: 3}
+  - {fileID: 12800000, guid: f2aaee1d18dc17341bdd99ec06bb5db4, type: 3}
+  - {fileID: 12800000, guid: a16142722f429b042b993381e9386e54, type: 3}
+  - {fileID: 12800000, guid: 87e6f8216c3e02647865c35052b6bd43, type: 3}
+  - {fileID: 12800000, guid: a0a42f80f8095a6478961603d013bea9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
