@@ -11,7 +11,11 @@ public class CharacterManager : MonoBehaviour
     [SerializeField] private List<SpriteRenderer> bgSpriteRenderers;
     private AudioManager audioManager;
 
+    public List<string> npcsNeutral = new List<string>();
+    public List<string> npcsLove = new List<string>();
+    public List<string> npcsHate = new List<string>();
 
+    bool preFirstNpc = true;
 
     // Start is called before the first frame update
     void Awake()
@@ -25,15 +29,52 @@ public class CharacterManager : MonoBehaviour
     {
         if(npcPrefabs.Count > 0)
         {
+            if (!preFirstNpc)
+            {
+                ObserveNpcReaction();
+            }
             currentNpcScript = Instantiate(npcPrefabs[0]).GetComponentInChildren<NPC>();
             npcPrefabs.RemoveAt(0);
             SwapBackgrounds();
             audioManager.UpdateMusic(currentNpcScript.tracks);
+            preFirstNpc = false;
         }
         else
         {
+            ObserveNpcReaction();
             TransitionToEndScreen();
         }
+    }
+
+    private void ObserveNpcReaction()
+    {
+        string name = ParseName(currentNpcScript.gameObject.transform.parent.name);
+
+        switch (currentNpcScript.reaction)
+        {
+            case NPC.Reactions.neutral:
+                npcsNeutral.Add(name);
+                break;
+            case NPC.Reactions.happy:
+                npcsLove.Add(name);
+                break;
+            case NPC.Reactions.negative:
+                npcsHate.Add(name);
+                break;
+        }
+    }
+
+    private string ParseName(string unParsedName)
+    {
+        string name = "";
+        foreach (string word in unParsedName.Split(' '))
+        {
+            if (!word.Contains("("))
+            {
+                name += word + " ";
+            }
+        }
+        return name;
     }
 
     private void SwapBackgrounds()
@@ -51,7 +92,18 @@ public class CharacterManager : MonoBehaviour
     }
     private void TransitionToEndScreen()
     {
-
+        foreach(string name in npcsNeutral)
+        {
+            Debug.Log("Neutral towards you: " + name);
+        }
+        foreach (string name in npcsLove)
+        {
+            Debug.Log("Love towards you: " + name);
+        }
+        foreach (string name in npcsHate)
+        {
+            Debug.Log("Hate towards you: " + name);
+        }
     }
 
     IEnumerator FadeBackground(SpriteRenderer spriteIn, SpriteRenderer spriteOut)
