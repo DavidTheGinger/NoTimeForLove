@@ -25,7 +25,7 @@ public class BubbleManager : MonoBehaviour
 
     public void initializeData()
     {
-        cam = GameObject.FindGameObjectsWithTag("MainCamera")[0].GetComponent<Camera>();
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         TextDelaySeconds = 1 / (wpm / 60f) / avg_word_len;
         startTime = Time.time;
         startPositionCamSpace = cam.WorldToScreenPoint(mouth_obj.transform.position);
