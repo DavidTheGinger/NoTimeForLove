@@ -205,6 +205,7 @@ MonoBehaviour:
   bubble_behaviors: []
   targets: []
   mouth_obj: {fileID: 434792691680978585}
+  font: {fileID: 0}
   dialogue_string: 
   bubble_dialogue: {fileID: 434792691537128998}
   myButton: {fileID: 0}
@@ -931,6 +932,7 @@ MonoBehaviour:
   bubble_behaviors: []
   targets: []
   mouth_obj: {fileID: 434792691680978585}
+  font: {fileID: 0}
   dialogue_string: 
   bubble_dialogue: {fileID: 434792692086001683}
   myButton: {fileID: 0}
@@ -1530,6 +1532,7 @@ MonoBehaviour:
   bubble_behaviors: []
   targets: []
   mouth_obj: {fileID: 434792691680978585}
+  font: {fileID: 0}
   dialogue_string: 
   bubble_dialogue: {fileID: 434792690892071493}
   myButton: {fileID: 0}
@@ -2336,6 +2339,7 @@ MonoBehaviour:
   bubble_behaviors: []
   targets: []
   mouth_obj: {fileID: 434792691680978585}
+  font: {fileID: 0}
   dialogue_string: 
   bubble_dialogue: {fileID: 434792691144484420}
   myButton: {fileID: 0}
@@ -2917,6 +2921,7 @@ MonoBehaviour:
   image_displayed: {fileID: 434792692440813981}
   avgWordTime: 0.2
   tutorial: 1
+  personalBackground: {fileID: 21300000, guid: b9182ab6ae4f6db42b03786818b1a265, type: 3}
   tracks: 000000000000000001010100
   talkSounds:
   - {fileID: 8300000, guid: e6e33580528b62746812954028c253e7, type: 3}
@@ -2973,6 +2978,7 @@ MonoBehaviour:
   - {fileID: 434792690817341013}
   - {fileID: 434792691341870338}
   mouth_obj: {fileID: 434792691680978585}
+  font: {fileID: 0}
 --- !u!198 &4952110978724452839
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -8080,6 +8086,7 @@ MonoBehaviour:
   bubble_behaviors: []
   targets: []
   mouth_obj: {fileID: 434792691680978585}
+  font: {fileID: 0}
   dialogue_string: 
   bubble_dialogue: {fileID: 434792691546548994}
   myButton: {fileID: 0}
@@ -8405,6 +8412,7 @@ MonoBehaviour:
   bubble_behaviors: []
   targets: []
   mouth_obj: {fileID: 434792691680978585}
+  font: {fileID: 0}
   dialogue_string: 
   bubble_dialogue: {fileID: 434792690830546767}
   myButton: {fileID: 0}

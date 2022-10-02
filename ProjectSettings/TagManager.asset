@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LongestText
   - AudioManager
+  - CharacterManager
   layers:
   - Default
   - TransparentFX

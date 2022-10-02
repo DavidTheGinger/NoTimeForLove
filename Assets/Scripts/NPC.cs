@@ -35,6 +35,8 @@ public class NPC : MonoBehaviour
 
     [SerializeField] private bool tutorial = false;
 
+    public Sprite personalBackground;
+
     public enum NpcState { entering, talking, leaving, waiting}
     NpcState npcState = NpcState.entering;
 
@@ -50,14 +52,18 @@ public class NPC : MonoBehaviour
     private float nextTalkTime = 0;
     private int sprite_index = 0;
 
-    void Awake()
+    private void Awake()
     {
-        transform.position = spawn_point.transform.position;
-        setTarget(chat_target);
         if (tutorial)
         {
             bubbleBehavior = GameObject.FindGameObjectWithTag("LongestText").GetComponent<BubbleBehavior>();
         }
+    }
+
+    void Start()
+    {
+        transform.position = spawn_point.transform.position;
+        setTarget(chat_target);
     }
 
     private void FixedUpdate()
@@ -117,6 +123,7 @@ public class NPC : MonoBehaviour
     {
         npcState = NpcState.talking;
         //Debug.Log("NPC: begin talking");
+        bubbleManager.initializeData();
         bubbleManager.beginTalking();
         StartCoroutine(RemoveSilhouette());
         StartCoroutine(TalkTimer());

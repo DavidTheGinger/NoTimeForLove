@@ -40,17 +40,23 @@ public class BubbleBehavior : BubbleManager
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         myButton = GetComponent<Button>();
         handScript = GameObject.FindGameObjectWithTag("Player").GetComponent<HandScript>();
         source = GetComponent<AudioSource>();
+    }
+
+    public void InitializeData()
+    {
+        Debug.Log(gameObject.name + " is initializing");
         image_displayed.alphaHitTestMinimumThreshold = 0.5f;
         dialogue_string = bubble_dialogue.text;
         bubble_dialogue.text = "";
         sprite_index = Random.Range(0, bubble_sprites.Count - 1);
         spriteDelay = Random.Range(spriteDelay - 2, spriteDelay + 2);
-
+        typingCoroutine = TypeDialogue(dialogue_string);
         DisplayText();
         StartCoroutine(SwitchSprite());
     }
@@ -71,7 +77,6 @@ public class BubbleBehavior : BubbleManager
 
     public void DisplayText()
     {
-        typingCoroutine = TypeDialogue(dialogue_string);
         StartCoroutine(typingCoroutine);
     }
 

@@ -19,19 +19,22 @@ public class BubbleManager : MonoBehaviour
     [SerializeField] private GameObject mouth_obj;
     public TMP_FontAsset font;
 
-    void Awake()
+    private void Awake()
     {
-        initializeData();
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
-
 
     public void initializeData()
     {
-        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        Debug.Log(gameObject.name + " is initializing");
         TextDelaySeconds = 1 / (wpm / 60f) / avg_word_len;
         startTime = Time.time;
         startPositionCamSpace = cam.WorldToScreenPoint(mouth_obj.transform.position);
         randomizeList(targets);
+        foreach (BubbleBehavior b in bubble_behaviors)
+        {
+            b.initializeData();
+        }
     }
 
     public void beginTalking()
