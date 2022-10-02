@@ -8,23 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4337421318624270633}
+  - component: {fileID: 8026296781928956956}
   - component: {fileID: 4337421318624270632}
+  - component: {fileID: 5913264147962956152}
   m_Layer: 0
   m_Name: Hand
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4337421318624270633
-Transform:
+--- !u!224 &8026296781928956956
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4337421318624270647}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -32,6 +33,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4337421318624270632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,10 +50,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e629582193082498e08a8b3cb018cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emojiHappyPrefab: {fileID: 4590775553408676599, guid: 478f33297f96e76499adebcab9108ad8, type: 3}
-  emojiAngryPrefab: {fileID: 8601639230226738759, guid: e3b8e95f6f6a9a140a734ccd2372b0d5, type: 3}
-  emojiLustPrefab: {fileID: 8104287134201527149, guid: dc038399c2232eb488a982eba272a923, type: 3}
-  emojiSadPrefab: {fileID: 4625779563979942121, guid: 81581a7800de7e448b9b5ba4ea781b2b, type: 3}
+  emojiHappyPrefab: {fileID: 8372863245427042227, guid: 7b585a20c106a054a8249a3646ebf8c4, type: 3}
+  emojiAngryPrefab: {fileID: 434806197982599973, guid: c1478cf971c50d247a9e33809568b79b, type: 3}
+  emojiLustPrefab: {fileID: 6193354205017397027, guid: a7819f0d720865847b2f614912eff363, type: 3}
+  emojiSadPrefab: {fileID: 5718234652184141338, guid: f899585433864fa4da58320010634ee7, type: 3}
   emojiHeld: 0
-  currentNpc: {fileID: 0}
+  hand_speed: 1
   cam: {fileID: 0}
+  emojiSticker: {fileID: 0}
+--- !u!222 &5913264147962956152
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4337421318624270647}
+  m_CullTransparentMesh: 1

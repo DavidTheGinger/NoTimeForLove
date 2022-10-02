@@ -8,6 +8,7 @@ public class BubbleBehavior : BubbleManager
 
     [SerializeField] private string dialogue_string;
     [SerializeField] private TextMeshProUGUI bubble_dialogue;
+    [SerializeField] private Button myButton;
     [SerializeField] private Image image_displayed;
     [SerializeField] private int sprite_index = 0;
     [SerializeField] private Collider2D text_collider;
@@ -39,6 +40,7 @@ public class BubbleBehavior : BubbleManager
     // Start is called before the first frame update
     void Start()
     {
+        handScript = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<HandScript>();
         source = GetComponent<AudioSource>();
         image_displayed.alphaHitTestMinimumThreshold = 0.5f;
         dialogue_string = bubble_dialogue.text;
@@ -124,11 +126,13 @@ public class BubbleBehavior : BubbleManager
             default:
                 break;
         }
+        handScript.PlaceEmoji(transform);
     }
 
     public void Shuddup()
     {
         StopCoroutine(typingCoroutine);
+        myButton.interactable = false;
     }
 
     IEnumerator TypeDialogue (string dialogue)

@@ -294,12 +294,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2197534334425081145}
-        m_TargetAssemblyTypeName: BubbleBehavior, Assembly-CSharp
+        m_TargetAssemblyTypeName: HandScript, Assembly-CSharp
         m_MethodName: ReacToReaction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -342,6 +342,7 @@ MonoBehaviour:
   mouth_obj: {fileID: 2197534335558252597}
   dialogue_string: 
   bubble_dialogue: {fileID: 2197534335148060810}
+  myButton: {fileID: 0}
   image_displayed: {fileID: 2197534334425081147}
   sprite_index: 0
   text_collider: {fileID: 2197534334425081144}
@@ -785,12 +786,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2197534334666514605}
-        m_TargetAssemblyTypeName: BubbleBehavior, Assembly-CSharp
+        m_TargetAssemblyTypeName: HandScript, Assembly-CSharp
         m_MethodName: ReacToReaction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -833,6 +834,7 @@ MonoBehaviour:
   mouth_obj: {fileID: 2197534335558252597}
   dialogue_string: 
   bubble_dialogue: {fileID: 2197534335689559743}
+  myButton: {fileID: 0}
   image_displayed: {fileID: 2197534334666514603}
   sprite_index: 0
   text_collider: {fileID: 2197534334666514582}
@@ -1370,12 +1372,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2197534335008042405}
-        m_TargetAssemblyTypeName: BubbleBehavior, Assembly-CSharp
+        m_TargetAssemblyTypeName: HandScript, Assembly-CSharp
         m_MethodName: ReacToReaction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1418,6 +1420,7 @@ MonoBehaviour:
   mouth_obj: {fileID: 2197534335558252597}
   dialogue_string: 
   bubble_dialogue: {fileID: 2197534334770363625}
+  myButton: {fileID: 0}
   image_displayed: {fileID: 2197534335008042403}
   sprite_index: 0
   text_collider: {fileID: 2197534335008042414}
@@ -2470,6 +2473,7 @@ MonoBehaviour:
   mouth_obj: {fileID: 2197534335558252597}
   dialogue_string: 
   bubble_dialogue: {fileID: 2197534335020742888}
+  myButton: {fileID: 0}
   image_displayed: {fileID: 2197534335793578374}
   sprite_index: 0
   text_collider: {fileID: 2197534335793578397}
@@ -3028,12 +3032,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2197534336174901076}
-        m_TargetAssemblyTypeName: BubbleBehavior, Assembly-CSharp
+        m_TargetAssemblyTypeName: HandScript, Assembly-CSharp
         m_MethodName: ReacToReaction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3076,6 +3080,7 @@ MonoBehaviour:
   mouth_obj: {fileID: 2197534335558252597}
   dialogue_string: 
   bubble_dialogue: {fileID: 2197534335155418542}
+  myButton: {fileID: 0}
   image_displayed: {fileID: 2197534336174901074}
   sprite_index: 0
   text_collider: {fileID: 2197534336174901073}
@@ -3351,12 +3356,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2197534336179242313}
-        m_TargetAssemblyTypeName: BubbleBehavior, Assembly-CSharp
+        m_TargetAssemblyTypeName: HandScript, Assembly-CSharp
         m_MethodName: ReacToReaction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3399,6 +3404,7 @@ MonoBehaviour:
   mouth_obj: {fileID: 2197534335558252597}
   dialogue_string: 
   bubble_dialogue: {fileID: 2197534334303128035}
+  myButton: {fileID: 0}
   image_displayed: {fileID: 2197534336179242295}
   sprite_index: 0
   text_collider: {fileID: 2197534336179242290}
