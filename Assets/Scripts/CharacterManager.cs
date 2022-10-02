@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
 {
-    [SerializeField] AudioSource source;
-    [SerializeField] private AudioClip[] clips;
-    private bool[] tracks;
+    [SerializeField] private List<GameObject> npcPrefabs;
 
-    [SerializeField] private NPC npc;
+    private NPC currentNpcScript;
+    private AudioManager audioManager;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        PlayMusic();
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -33,15 +32,6 @@ public class CharacterManager : MonoBehaviour
         yield return new WaitForSeconds(10);
         NextNPC();
     }
-    
-    
-    private void PlayMusic()
-    {
-        tracks = npc.tracks;
-        for(int i = 0; i < tracks.Length; i++)
-        {
-            if(tracks[i]) { source.PlayOneShot(clips[i]); }
-        }
-    }
+
 
 }

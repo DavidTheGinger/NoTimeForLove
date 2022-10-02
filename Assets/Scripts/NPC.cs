@@ -56,7 +56,7 @@ public class NPC : MonoBehaviour
         setTarget(chat_target);
         if (tutorial)
         {
-            bubbleBehavior = GameObject.FindGameObjectsWithTag("LongestText")[0].GetComponent<BubbleBehavior>();
+            bubbleBehavior = GameObject.FindGameObjectWithTag("LongestText").GetComponent<BubbleBehavior>();
         }
     }
 

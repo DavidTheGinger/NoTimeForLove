@@ -43,7 +43,7 @@ public class BubbleBehavior : BubbleManager
     void Start()
     {
         myButton = GetComponent<Button>();
-        handScript = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<HandScript>();
+        handScript = GameObject.FindGameObjectWithTag("Player").GetComponent<HandScript>();
         source = GetComponent<AudioSource>();
         image_displayed.alphaHitTestMinimumThreshold = 0.5f;
         dialogue_string = bubble_dialogue.text;
