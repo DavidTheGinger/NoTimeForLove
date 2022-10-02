@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2011034123708147577}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: AudioManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 92ada14fe37029d4e8681b6af1a93c4a, type: 3}
   - {fileID: 8300000, guid: 4dcf2aa14861f424fbf435cd2005d41c, type: 3}
   - {fileID: 8300000, guid: 65a18878befe2e349a038a850b2c0106, type: 3}
-  - {fileID: 8300000, guid: 1ad5de348936a1e40ba59657e6fbec8a, type: 3}
+  - {fileID: 8300000, guid: 19b8e0a67a5494a40b1d87800293f608, type: 3}
   - {fileID: 8300000, guid: 1bf2fad876aea1d4c8e626631ac0d141, type: 3}
   - {fileID: 8300000, guid: 67b10ada69fae26448dc4da21c180143, type: 3}
   - {fileID: 8300000, guid: ef0d3914d8db4ac4bbed898f4e61cc73, type: 3}

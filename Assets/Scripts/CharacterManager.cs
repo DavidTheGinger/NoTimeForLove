@@ -6,13 +6,14 @@ public class CharacterManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> npcPrefabs;
 
-    private NPC currentNpcScript;
+    [SerializeField] private NPC currentNpcScript;
     private AudioManager audioManager;
 
     // Start is called before the first frame update
     void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+        audioManager.UpdateMusic(currentNpcScript.tracks);
     }
 
     // Update is called once per frame

@@ -24,6 +24,7 @@ public class AudioManager : MonoBehaviour
 
     private void InitializeAudioSources()
     {
+        audioSources = new List<AudioSource>();
         for (int i = 0; i < startingTracks.Length; i++)
         {
             audioSources.Add(gameObject.AddComponent(typeof(AudioSource)) as AudioSource);
