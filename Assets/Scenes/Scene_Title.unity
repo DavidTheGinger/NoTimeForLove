@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeDuration: 0.5
-  SceneName: Scene_test
+  SceneName: Scene_Gameplay
   fader: {fileID: 0}
 --- !u!114 &778832972
 MonoBehaviour:
