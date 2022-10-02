@@ -50,14 +50,16 @@ public class BubbleBehavior : BubbleManager
 
     public void InitializeData()
     {
-        Debug.Log(gameObject.name + " is initializing");
+        Debug.Log(gameObject.name + " is initializing 1%");
         image_displayed.alphaHitTestMinimumThreshold = 0.5f;
         dialogue_string = bubble_dialogue.text;
         bubble_dialogue.text = "";
+        Debug.Log(gameObject.name + " is initializing 50%");
         sprite_index = Random.Range(0, bubble_sprites.Count - 1);
         spriteDelay = Random.Range(spriteDelay - 2, spriteDelay + 2);
-        typingCoroutine = TypeDialogue(dialogue_string);
+        Debug.Log(gameObject.name + " is initializing 100%");
         DisplayText();
+        Debug.Log(gameObject.name + "Theoretically called Display text");
         StartCoroutine(SwitchSprite());
     }
 
@@ -77,6 +79,8 @@ public class BubbleBehavior : BubbleManager
 
     public void DisplayText()
     {
+        Debug.Log("Diplaying Text");
+        typingCoroutine = TypeDialogue(dialogue_string);
         StartCoroutine(typingCoroutine);
     }
 
@@ -145,6 +149,7 @@ public class BubbleBehavior : BubbleManager
 
     IEnumerator TypeDialogue (string dialogue)
     {
+        Debug.Log("In the Type Dialogue coroutine");
         bubble_dialogue.text = "";
         foreach(string word in dialogue.Split(' '))
         {

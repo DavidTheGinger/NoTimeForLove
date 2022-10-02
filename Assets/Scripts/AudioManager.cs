@@ -43,11 +43,11 @@ public class AudioManager : MonoBehaviour
         for (int i = 0; i < tracks.Length; i++)
         {
             if (tracks[i]) {
-                FadeAudioIO(i, baseClipVolume);
+                StartCoroutine(FadeAudioIO(i, baseClipVolume));
             }
             else
             {
-                FadeAudioIO(i, 0);
+                StartCoroutine(FadeAudioIO(i, 0));
             }
         }
     }
