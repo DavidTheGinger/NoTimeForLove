@@ -38,6 +38,7 @@ public class NPC : MonoBehaviour
 
     [SerializeField] private bool[] tracks;
     [SerializeField] private AudioClip[] clips;
+    [SerializeField] private AudioClip[] talkSounds;
     [SerializeField] private AudioSource source;
 
     void Awake()
@@ -58,6 +59,7 @@ public class NPC : MonoBehaviour
                 }
                 break;
             case NpcState.talking:
+                Talk();
                 if (tutorial)
                 {
 
@@ -244,5 +246,10 @@ public class NPC : MonoBehaviour
         }
     }
 
+    private void Talk()
+    {
+        int index = Random.Range(0, talkSounds.Length);
+        
+    }
 
 }
