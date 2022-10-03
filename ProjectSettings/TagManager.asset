@@ -10,6 +10,7 @@ TagManager:
   - FadeMask
   - MockSceneParent
   - ScoreKeeper
+  - TimerHand
   layers:
   - Default
   - TransparentFX

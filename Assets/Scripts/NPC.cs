@@ -54,14 +54,21 @@ public class NPC : MonoBehaviour
     private float nextTalkTime = 0;
     private int sprite_index = 0;
 
+    private float clockNoonOffset = -10f;
+    private GameObject timerHand;
+
     private CharacterManager characterManager;
 
     private GameObject mockSceneParent;
+
+    private IEnumerator clockHandCoroutine;
 
     private void Awake()
     {
         characterManager = GameObject.FindGameObjectWithTag("CharacterManager").GetComponent<CharacterManager>();
         mockSceneParent = GameObject.FindGameObjectWithTag("MockSceneParent");
+        timerHand = GameObject.FindGameObjectWithTag("TimerHand");
+        clockHandCoroutine = MoveTimerHands();
         if (tutorial)
         {
             bubbleBehavior = GameObject.FindGameObjectWithTag("LongestText").GetComponent<BubbleBehavior>();
@@ -229,7 +236,10 @@ public class NPC : MonoBehaviour
 
     IEnumerator TalkTimer()
     {
+        StartCoroutine(clockHandCoroutine);
         yield return new WaitForSeconds(10);
+        StopCoroutine(clockHandCoroutine);
+        timerHand.transform.rotation = Quaternion.Euler(0f, 0f, clockNoonOffset);
         if (!tutorial)
         {
             Leave();
@@ -241,6 +251,16 @@ public class NPC : MonoBehaviour
                 yield return null;
             }
             Wait();
+        }
+    }
+
+    IEnumerator MoveTimerHands()
+    {
+
+        while (true)
+        {
+            timerHand.transform.rotation = Quaternion.Euler(0f, 0f, timerHand.transform.rotation.eulerAngles.z - 36 * Time.deltaTime);
+            yield return null;
         }
     }
 
