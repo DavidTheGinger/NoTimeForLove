@@ -216,8 +216,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcPrefabs:
-  - {fileID: 2197534335699617744, guid: f48da5c0a1fec944d8f3141602c0a866, type: 3}
   - {fileID: 2197534335699617744, guid: eed16f9ab5f56ee4c90af6f8ce0270a0, type: 3}
+  - {fileID: 2197534335699617744, guid: 62486724ba27c194bad948f66bdfe729, type: 3}
+  - {fileID: 2197534335699617744, guid: 5375c08af56bfa740ad1f3c194475802, type: 3}
+  - {fileID: 2197534335699617744, guid: 869c8caac392d284990a46d8b205aa89, type: 3}
+  - {fileID: 2197534335699617744, guid: 9847b02684f52ab40b9a262061254c21, type: 3}
+  - {fileID: 2197534335699617744, guid: 49b487ac78237aa4abe4f92fe1f261e9, type: 3}
+  - {fileID: 2197534335699617744, guid: 32b34c221f23e1b4a97b1adba7e20295, type: 3}
+  - {fileID: 2197534335699617744, guid: 15b91d02c8b03f04481ba8263de8253b, type: 3}
   currentNpcScript: {fileID: 0}
   bgSpriteRenderers:
   - {fileID: 1722783560407396740}
@@ -225,6 +231,7 @@ MonoBehaviour:
   npcsNeutral: []
   npcsLove: []
   npcsHate: []
+  tracks: 000000000000000000000000
 --- !u!1 &1722783560824566214
 GameObject:
   m_ObjectHideFlags: 0

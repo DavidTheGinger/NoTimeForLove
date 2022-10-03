@@ -16,6 +16,8 @@ public class CharacterManager : MonoBehaviour
     public List<string> npcsLove = new List<string>();
     public List<string> npcsHate = new List<string>();
 
+    [SerializeField] public bool[] tracks;
+
     bool preFirstNpc = true;
 
     // Start is called before the first frame update
@@ -44,6 +46,8 @@ public class CharacterManager : MonoBehaviour
         else
         {
             ObserveNpcReaction();
+            UpdateFinalMusic();
+            audioManager.UpdateMusic(tracks);
             TransitionToEndScreen();
         }
     }
@@ -55,13 +59,27 @@ public class CharacterManager : MonoBehaviour
         switch (currentNpcScript.reaction)
         {
             case NPC.Reactions.neutral:
-                npcsNeutral.Add(name);
+                if(currentNpcScript.minReactionForLove == NPC.Reactions.neutral || currentNpcScript.minReactionForLove == NPC.Reactions.negative)
+                {
+                    npcsLove.Add(name);
+                }
+                else
+                {
+                    npcsNeutral.Add(name);
+                }
                 break;
             case NPC.Reactions.happy:
                 npcsLove.Add(name);
                 break;
             case NPC.Reactions.negative:
-                npcsHate.Add(name);
+                if (currentNpcScript.minReactionForLove == NPC.Reactions.negative)
+                {
+                    npcsLove.Add(name);
+                }
+                else
+                {
+                    npcsHate.Add(name);
+                }
                 break;
         }
     }
@@ -79,6 +97,60 @@ public class CharacterManager : MonoBehaviour
         return name;
     }
 
+    private void UpdateFinalMusic()
+    {
+        switch (npcsLove.Count)
+        {
+            case 0:
+                tracks[5] = true;
+                break;
+            case 1:
+                tracks[11] = true;
+                break;
+            case 2:
+                tracks[9] = true;
+                break;
+            case 3:
+                tracks[9] = true;
+                tracks[10] = true;
+                break;
+            case 4:
+                tracks[9] = true;
+                tracks[10] = true;
+                tracks[1] = true;
+                break;
+            case 5:
+                tracks[9] = true;
+                tracks[10] = true;
+                tracks[1] = true;
+                tracks[4] = true;
+                break;
+            case 6:
+                tracks[9] = true;
+                tracks[10] = true;
+                tracks[1] = true;
+                tracks[4] = true;
+                tracks[8] = true;
+                break;
+            case 7:
+                tracks[9] = true;
+                tracks[10] = true;
+                tracks[1] = true;
+                tracks[4] = true;
+                tracks[8] = true;
+                tracks[0] = true;
+                break;
+            default:
+                tracks[9] = true;
+                tracks[10] = true;
+                tracks[1] = true;
+                tracks[4] = true;
+                tracks[8] = true;
+                tracks[0] = true;
+                break;
+        }
+    }
+
     private void SwapBackgrounds()
     {
 
@@ -94,7 +166,7 @@ public class CharacterManager : MonoBehaviour
     }
     private void TransitionToEndScreen()
     {
-        /*
+        
         foreach(string name in npcsNeutral)
         {
             Debug.Log("Neutral towards you: " + name);
@@ -107,7 +179,7 @@ public class CharacterManager : MonoBehaviour
         {
             Debug.Log("Hate towards you: " + name);
         }
-        */
+        
 
         scoreKeeper.npcsHate = npcsHate;
         scoreKeeper.npcsLove = npcsLove;

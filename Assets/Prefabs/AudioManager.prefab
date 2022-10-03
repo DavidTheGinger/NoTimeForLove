@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffae1df8ee75ba7438a8a9b106bd765e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTracks: 010101010000000000000000
+  startingTracks: 000000000001000000010100
   clips:
   - {fileID: 8300000, guid: 442f32fc32c9fd048add1571912483e6, type: 3}
   - {fileID: 8300000, guid: 5be1ec3bbbe425946bd7e7bf66c93871, type: 3}

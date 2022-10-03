@@ -6,7 +6,7 @@ public class NPC : MonoBehaviour
 {
 
     [SerializeField] private BubbleManager bubbleManager;
-    [SerializeField] private BubbleBehavior bubbleBehavior;
+    private BubbleBehavior bubbleBehavior;
     [SerializeField] private List<Sprite> talkingSprites;
     [SerializeField] private Sprite neutralNpcSprite;
     [SerializeField] private Sprite happyNpcSprite;
@@ -38,10 +38,11 @@ public class NPC : MonoBehaviour
 
 
     public enum NpcState { entering, talking, leaving, waiting}
-    NpcState npcState = NpcState.entering;
+    public NpcState npcState = NpcState.entering;
 
     public enum Reactions { neutral, happy, negative}
     public Reactions reaction = Reactions.neutral;
+    public Reactions minReactionForLove = Reactions.happy;
 
     [SerializeField] public bool[] tracks;
     [SerializeField] private AudioClip[] talkSounds;
@@ -114,6 +115,10 @@ public class NPC : MonoBehaviour
                     {
                         tutorial = false;
                         StartCoroutine(TutoiralReactTimer());
+                    }
+                    else
+                    {
+                        Talk();
                     }
                 }
                 

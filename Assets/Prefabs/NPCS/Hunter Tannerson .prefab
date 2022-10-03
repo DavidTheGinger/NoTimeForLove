@@ -27,8 +27,7 @@ Transform:
   m_LocalPosition: {x: 31.29, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5435668126372497778}
+  m_Children: []
   m_Father: {fileID: 2197534335914348336}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -98,12 +97,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The people you react to will, of course, form their own opinions of you
-    based on the stickers you choose. Before you act, remember to ask yourself: How
-    will this make them feel? '
+  m_text: "But I s\u2019pose I\u2019m just goin\u2019 on now. I can do it sometimes,
+    on \u2018count of it gettin\u2019 lonely on the road. Don\u2019t offen talk to
+    many people, \u2018cept over the radio at nights, so I get excited. It\u2019s
+    been a lotta long nights since I started drivin\u2019 \u2013 but I knew what
+    I was gettin\u2019 myself into after my wife left me."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b0800fce24572ab459fe70b0b45caf37, type: 2}
-  m_sharedMaterial: {fileID: 2849475825069284677, guid: b0800fce24572ab459fe70b0b45caf37, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e63534abe29e274b85e435f56b4b2f2, type: 2}
+  m_sharedMaterial: {fileID: 7508481016669073883, guid: 2e63534abe29e274b85e435f56b4b2f2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -127,13 +128,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.65
+  m_fontSize: 19.8
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 30
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -354,9 +355,9 @@ MonoBehaviour:
   myNpc: {fileID: 2197534335914348339}
   handScript: {fileID: 0}
   happyReaction: 45
-  lustReaction: 45
-  sadReaction: 45
-  angryReaction: 45
+  lustReaction: 104
+  sadReaction: 110
+  angryReaction: 110
   spriteDelay: 13
   bubbleGrowthSpeed: 10
   talking: 0
@@ -659,8 +660,7 @@ Transform:
   m_LocalPosition: {x: -15.700104, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2414031197706742034}
+  m_Children: []
   m_Father: {fileID: 2197534335914348336}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -848,10 +848,10 @@ MonoBehaviour:
   target: {fileID: 0}
   myNpc: {fileID: 2197534335914348339}
   handScript: {fileID: 0}
-  happyReaction: 45
-  lustReaction: 45
-  sadReaction: 45
-  angryReaction: 45
+  happyReaction: 104
+  lustReaction: 104
+  sadReaction: 110
+  angryReaction: 110
   spriteDelay: 13
   bubbleGrowthSpeed: 10
   talking: 0
@@ -1017,8 +1017,7 @@ Transform:
   m_LocalPosition: {x: 14.09, y: 10.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1834757332105004777}
+  m_Children: []
   m_Father: {fileID: 2197534335914348336}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1088,40 +1087,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Usually a new bachelor, bachelorette, or bachelorx would show up in ten
-    seconds, but I made sure to stop the clock until I knew that you knew how to
-    react to someone\u2019s statement. Now that we have more time, we can chat about
-    whatever we want until you\u2019re ready to get started for real. Let\u2019s
-    see\u2026 We could talk about the weather? But, no, I suppose that\u2019s boring.
-    Maybe the postal service? Barely anyone talks about it \u2013 I guess people
-    think it\u2019s boring, too, but I\u2019m sure they deal with a lot of interesting
-    things every day. I work at a bank, so I\u2019m sure there are similarities;
-    I\u2019m not sure I could be trusted around all of those stamps myself. Do you
-    think postal workers ever sneak them out of the building? Don\u2019t ask me why
-    I know this, but there was a pretty neat one that was a limited print from a
-    duck painting competition from 2004\u2026 I think they had to use oils? Either
-    way, they only printed maybe 300 of the winners by mistake, and guess what: Two-thirds
-    of them were destroyed in Hurricane Katrina the next year! Now, there are only
-    100 of the suckers left, and they\u2019ve been known to go up for auction for
-    as much as $60! I\u2019ve been kind of hoping to see one in person at one point,
-    but the closest I came was catching a glimpse of one through my neighbor\u2019s
-    window when she was watching The Antiquity Showcase one evening. Her TV faces
-    the window, so I can\u2019t help but notice things when I\u2019m coming and going
-    some days. She\u2019s very nice, too \u2013 even gave me cookies back when I
-    first moved here. She reminds me of the way my grandma used to be\u2026 Not that
-    she\u2019s dead or anything, just that we don\u2019t talk too much these days.
-    I used to blame it on the pandemic, but, even now, we haven\u2019t reconnected,
-    which is kind of sad, I suppose. I guess things like that just happen sometimes.
-    Have you ever just stopped talking to someone because neither of you chose to
-    keep in touch? It happens a lot more than you think. Think of all of the people
-    you\u2019ve ever met, greeted on the street, or known from business meetings,
-    classes, even sports teams. By now, you\u2019ve probably known over a thousand
-    people in some way, but the circle of folks you keep up with even monthly is
-    probably in the low dozens. It\u2019s pretty easy to be forgotten, when you think
-    about it. It really takes a lot to stand out in a crowd."
+  m_text: "Not a lotta time left, but speakin\u2019 o\u2019 nights, I gotta fun fact:
+    I saw a werewolf on th\u2019 road once. Out west \u2018n Oregon, ya know? Ol\u2019
+    country road, not much lights, weather just startin\u2019 to turn cold. Ran \u2018cross
+    the road on all fours like any ol\u2019 dog, but it weren\u2019t a dog, not one
+    bit. Turned \u2018n\u2019 looked at my rig, too, like it knew I was innit"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b0800fce24572ab459fe70b0b45caf37, type: 2}
-  m_sharedMaterial: {fileID: 2849475825069284677, guid: b0800fce24572ab459fe70b0b45caf37, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e63534abe29e274b85e435f56b4b2f2, type: 2}
+  m_sharedMaterial: {fileID: 7508481016669073883, guid: 2e63534abe29e274b85e435f56b4b2f2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1145,13 +1118,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7.1
+  m_fontSize: 18.7
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 30
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1214,8 +1187,7 @@ Transform:
   m_LocalPosition: {x: -14.600104, y: 11.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 606261610267180472}
+  m_Children: []
   m_Father: {fileID: 2197534335914348336}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1280,8 +1252,7 @@ Transform:
   m_LocalPosition: {x: 13.32, y: -2.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2175251651352344542}
+  m_Children: []
   m_Father: {fileID: 2197534335914348336}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1469,9 +1440,9 @@ MonoBehaviour:
   target: {fileID: 0}
   myNpc: {fileID: 2197534335914348339}
   handScript: {fileID: 0}
-  happyReaction: 45
+  happyReaction: 104
   lustReaction: 104
-  sadReaction: 104
+  sadReaction: 45
   angryReaction: 110
   spriteDelay: 13
   bubbleGrowthSpeed: 10
@@ -1677,13 +1648,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Hello, and welcome to speed dating! Things move pretty quickly here \u2013
-    you\u2019ll only have ten seconds to get to know one another, so you also have
-    to get used to understanding a lot in a short period of time. Otherwise, things
-    might turn messy before you realize it. "
+  m_text: "\u2018Lo there, name\u2019s Hunter. Kinda new to this stuff, so \u2018pologies
+    if I messup a few words. I\u2019mma driver, semis, hauling things from one place
+    to \u2018nother. They like to call us owner-operators now, but that\u2019s a
+    bit like puttin\u2019 a piglet \u2018n a wedding dress if ya get my meanin\u2019
+    \u2013 lotta sparkle for li\u2019l reward."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b0800fce24572ab459fe70b0b45caf37, type: 2}
-  m_sharedMaterial: {fileID: 2849475825069284677, guid: b0800fce24572ab459fe70b0b45caf37, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e63534abe29e274b85e435f56b4b2f2, type: 2}
+  m_sharedMaterial: {fileID: 7508481016669073883, guid: 2e63534abe29e274b85e435f56b4b2f2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1707,13 +1679,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.65
+  m_fontSize: 19.8
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 30
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1815,13 +1787,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Reacting to what people have to say is an important part of building a
-    lasting relationship. Giving an appropriate reaction can be tough, but it gets
-    easier \u2013 and faster \u2013 once you\u2019ve developed an eye for spotting
-    your likes and dislikes in a conversation. "
+  m_text: "I mean, I been drivin\u2019 for \u2018bout sixteen, seventeen years, ya
+    know? It weren\u2019t never really my plan in life, but things happ\u2019n and
+    ya just kinda go with it. If I could\u2019a done one thing instead, I\u2019d\u2019ve
+    been a chef. Big hat, big apron, the whole nine. I\u2019m from Louisiana, see,
+    and we gotta lot o\u2019 problems, but we do food right. Real food, I mean. Gumbo
+    \u2018n\u2019 crawdads \u2018n\u2019 turtle soup, if ya like the taste, \u2018course."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b0800fce24572ab459fe70b0b45caf37, type: 2}
-  m_sharedMaterial: {fileID: 2849475825069284677, guid: b0800fce24572ab459fe70b0b45caf37, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e63534abe29e274b85e435f56b4b2f2, type: 2}
+  m_sharedMaterial: {fileID: 7508481016669073883, guid: 2e63534abe29e274b85e435f56b4b2f2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1845,13 +1819,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.35
+  m_fontSize: 16.95
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 30
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1953,12 +1927,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Just react to any of these statements when you\u2019re ready to move on.
-    You can react by touching one of the emotion stickers, then selecting the statement
-    that stands out to you. Which do you find the most interesting?"
+  m_text: "Don\u2019t like talkin\u2019 \u2018bout it much and you don\u2019t wanna
+    hear it, I\u2019m sure, but yeah, I been married before. Good woman, at least
+    I tell myself, ya know? Dunno if I left her or she left me on paper, but she
+    went off \u2018n\u2019 joined one o\u2019 those communes. Kool-Aid \u2018n\u2019
+    long dresses \u2018n\u2019 cross \u2018n\u2019 stuff. Still hope she\u2019s doin\u2019
+    fine some nights. "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b0800fce24572ab459fe70b0b45caf37, type: 2}
-  m_sharedMaterial: {fileID: 2849475825069284677, guid: b0800fce24572ab459fe70b0b45caf37, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e63534abe29e274b85e435f56b4b2f2, type: 2}
+  m_sharedMaterial: {fileID: 7508481016669073883, guid: 2e63534abe29e274b85e435f56b4b2f2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1982,13 +1959,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.55
+  m_fontSize: 19.2
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 30
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2051,8 +2028,7 @@ Transform:
   m_LocalPosition: {x: 30.85, y: 10.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3318339103394493848}
+  m_Children: []
   m_Father: {fileID: 2197534335914348336}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2153,12 +2129,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "If it all seems stressful, try using one of your four emotion stickers
-    to react to this phrase! Don\u2019t worry, no matter which you put here, I won\u2019t
-    judge! I\u2019d just be happy to know that you went along with my instructions."
+  m_text: "Lotta times, I think \u2018bout fixin\u2019 my rig up and turnin\u2019
+    her into one o\u2019 those food trucks. I know, it\u2019s not a real food truck,
+    but wouldn\u2019 that be a sight? Hunter\u2019s Semi Food Truck! Bringin\u2019
+    the best o\u2019 Cajun cookin\u2019 to a town near you. Even gotta friend can
+    paint it up real nice, ya know? Maybe a big ol\u2019 cartoon o\u2019 me with
+    that hat. Or, wait now: How \u2018bout that piglet \u2018n a wedding dress? Cajun
+    Bridal Boils, I like it."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b0800fce24572ab459fe70b0b45caf37, type: 2}
-  m_sharedMaterial: {fileID: 2849475825069284677, guid: b0800fce24572ab459fe70b0b45caf37, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e63534abe29e274b85e435f56b4b2f2, type: 2}
+  m_sharedMaterial: {fileID: 7508481016669073883, guid: 2e63534abe29e274b85e435f56b4b2f2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2182,13 +2162,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.4
+  m_fontSize: 16.8
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 30
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2251,8 +2231,7 @@ Transform:
   m_LocalPosition: {x: -32.5, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4735572474311584317}
+  m_Children: []
   m_Father: {fileID: 2197534335914348336}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2266,7 +2245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2197534335699617747}
   m_Layer: 0
-  m_Name: 'Guy Mitchell But As An Employee Teaching You How To Speed Date '
+  m_Name: 'Hunter Tannerson '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2348,8 +2327,7 @@ Transform:
   m_LocalPosition: {x: -32.1, y: 11.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 769034416782944624}
+  m_Children: []
   m_Father: {fileID: 2197534335914348336}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2537,10 +2515,10 @@ MonoBehaviour:
   target: {fileID: 0}
   myNpc: {fileID: 2197534335914348339}
   handScript: {fileID: 0}
-  happyReaction: 45
-  lustReaction: 45
-  sadReaction: 45
-  angryReaction: 45
+  happyReaction: 104
+  lustReaction: 104
+  sadReaction: 110
+  angryReaction: 110
   spriteDelay: 13
   bubbleGrowthSpeed: 10
   talking: 0
@@ -2752,7 +2730,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d7c838742301644ab0b80a8c5898624, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6cbb33bebc7f3a0459df862ccf9a43e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2851,7 +2829,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b03f3f0f2865f2c41a649166a3baaba6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d48c56955b6360147a47182613009182, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2876,30 +2854,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubbleManager: {fileID: 2197534335914348338}
   talkingSprites:
-  - {fileID: 21300000, guid: b03f3f0f2865f2c41a649166a3baaba6, type: 3}
-  - {fileID: 21300000, guid: c4c08f7284f431f48b4c52ac159064de, type: 3}
-  neutralNpcSprite: {fileID: 21300000, guid: b03f3f0f2865f2c41a649166a3baaba6, type: 3}
-  happyNpcSprite: {fileID: 21300000, guid: c047510c69329094eaef80d446b2cd1e, type: 3}
-  negativeNpcSprite: {fileID: 21300000, guid: 0ae3e5b1e2b3111498acbe63af96ce0f, type: 3}
-  neutralEmojiParticle: {fileID: 21300000, guid: d54f28adde2e2c14f899e1485654a6d9, type: 3}
+  - {fileID: 21300000, guid: d48c56955b6360147a47182613009182, type: 3}
+  - {fileID: 21300000, guid: d0848af41b473dd4f929a797296b03b5, type: 3}
+  neutralNpcSprite: {fileID: 21300000, guid: d48c56955b6360147a47182613009182, type: 3}
+  happyNpcSprite: {fileID: 21300000, guid: b544d1697cbc19548b3631ffcc6b12a8, type: 3}
+  negativeNpcSprite: {fileID: 21300000, guid: 405a4db0e04aca04f880922a1f356086, type: 3}
+  neutralEmojiParticle: {fileID: 21300000, guid: b5b7d99697f5efe4b914df7524d2de8a, type: 3}
   happyEmojiParticle: {fileID: 21300000, guid: fa4c0bc1a906d184dae27b536ff0ff7b, type: 3}
-  negativeEmojiParticle: {fileID: 21300000, guid: 138f100778514f6428d551e9e6681e9d, type: 3}
+  negativeEmojiParticle: {fileID: 21300000, guid: b5b7d99697f5efe4b914df7524d2de8a, type: 3}
   silhouette: {fileID: 2197534335827936236}
-  personalBackground: {fileID: 21300000, guid: b9182ab6ae4f6db42b03786818b1a265, type: 3}
+  personalBackground: {fileID: 21300000, guid: c685d1b1ecbff6d40a4320e3b0bce983, type: 3}
   silhouette_removal_speed: 0.8
   npc_movespeed: 5
-  talkingDelay: 0.3
-  pitch_min: 1.1
-  pitch_max: 1.2
+  talkingDelay: 0.4
+  pitch_min: 0.65
+  pitch_max: 0.8
   spawn_point: {fileID: 2197534335727752408}
   chat_target: {fileID: 2197534335971284657}
   end_target: {fileID: 2197534334426095422}
   particles: {fileID: 6687540611628009291}
   image_displayed: {fileID: 2197534335914348337}
   avgWordTime: 0.09
-  tutorial: 1
+  tutorial: 0
   reaction: 0
-  tracks: 000000000001010000000000
+  minReactionForLove: 1
+  tracks: 000001000001000000000000
   talkSounds:
   - {fileID: 8300000, guid: e6e33580528b62746812954028c253e7, type: 3}
   - {fileID: 8300000, guid: 66ca90f5a3a6b204b85ff7c33f1d38b9, type: 3}
@@ -8106,10 +8085,10 @@ MonoBehaviour:
   target: {fileID: 0}
   myNpc: {fileID: 2197534335914348339}
   handScript: {fileID: 0}
-  happyReaction: 45
+  happyReaction: 104
   lustReaction: 45
   sadReaction: 45
-  angryReaction: 45
+  angryReaction: 110
   spriteDelay: 13
   bubbleGrowthSpeed: 10
   talking: 0
@@ -8432,10 +8411,10 @@ MonoBehaviour:
   target: {fileID: 0}
   myNpc: {fileID: 2197534335914348339}
   handScript: {fileID: 0}
-  happyReaction: 45
-  lustReaction: 45
-  sadReaction: 45
-  angryReaction: 45
+  happyReaction: 110
+  lustReaction: 110
+  sadReaction: 110
+  angryReaction: 110
   spriteDelay: 13
   bubbleGrowthSpeed: 10
   talking: 0
@@ -8574,675 +8553,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &3270813153758559768
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 769034416782944624}
-  - component: {fileID: 5699102864533501144}
-  m_Layer: 0
-  m_Name: bubble_1 (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &769034416782944624
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3270813153758559768}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.59999996, y: 0.59999996, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2197534335768868678}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5699102864533501144
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3270813153758559768}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 875045d8a8445cf4297d84d2d9d3630b, type: 3}
-  m_Color: {r: 0.7735849, g: 0.39044145, b: 0.39044145, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 30.599998, y: 30.599998}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!1 &4515005182805768060
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5435668126372497778}
-  - component: {fileID: 8584088793015894601}
-  m_Layer: 0
-  m_Name: bubble_1 (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &5435668126372497778
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4515005182805768060}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2197534334290905336}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8584088793015894601
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4515005182805768060}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 875045d8a8445cf4297d84d2d9d3630b, type: 3}
-  m_Color: {r: 0.7735849, g: 0.39044145, b: 0.39044145, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 30.599998, y: 30.599998}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!1 &4788269966781136185
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4735572474311584317}
-  - component: {fileID: 1985817449879878862}
-  m_Layer: 0
-  m_Name: bubble_1 (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &4735572474311584317
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4788269966781136185}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2197534335697226975}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1985817449879878862
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4788269966781136185}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 875045d8a8445cf4297d84d2d9d3630b, type: 3}
-  m_Color: {r: 0.7735849, g: 0.39044145, b: 0.39044145, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 30.599998, y: 30.599998}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!1 &6400130481159434067
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2175251651352344542}
-  - component: {fileID: 4706699421979882401}
-  m_Layer: 0
-  m_Name: bubble_1 (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &2175251651352344542
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6400130481159434067}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2197534334815476641}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4706699421979882401
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6400130481159434067}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 875045d8a8445cf4297d84d2d9d3630b, type: 3}
-  m_Color: {r: 0.7735849, g: 0.39044145, b: 0.39044145, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 30.599998, y: 30.599998}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!1 &6625766138069248250
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 606261610267180472}
-  - component: {fileID: 3514191395325865646}
-  m_Layer: 0
-  m_Name: bubble_1 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &606261610267180472
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6625766138069248250}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2197534334781277112}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3514191395325865646
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6625766138069248250}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 875045d8a8445cf4297d84d2d9d3630b, type: 3}
-  m_Color: {r: 0.7735849, g: 0.39044145, b: 0.39044145, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 30.599998, y: 30.599998}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!1 &6706452369772684723
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2414031197706742034}
-  - component: {fileID: 6741198995972351994}
-  m_Layer: 0
-  m_Name: bubble_1 (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &2414031197706742034
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6706452369772684723}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2197534334601068714}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6741198995972351994
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6706452369772684723}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 875045d8a8445cf4297d84d2d9d3630b, type: 3}
-  m_Color: {r: 0.7735849, g: 0.39044145, b: 0.39044145, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 30.599998, y: 30.599998}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!1 &8909827810162792874
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1834757332105004777}
-  - component: {fileID: 6831347152572562288}
-  m_Layer: 0
-  m_Name: bubble_1 (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1834757332105004777
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8909827810162792874}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2197534334743186395}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6831347152572562288
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8909827810162792874}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 875045d8a8445cf4297d84d2d9d3630b, type: 3}
-  m_Color: {r: 0.7735849, g: 0.39044145, b: 0.39044145, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 30.599998, y: 30.599998}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!1 &8957650074476753333
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3318339103394493848}
-  - component: {fileID: 5614790975183442741}
-  m_Layer: 0
-  m_Name: bubble_1 (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &3318339103394493848
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8957650074476753333}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2197534335415374760}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5614790975183442741
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8957650074476753333}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 875045d8a8445cf4297d84d2d9d3630b, type: 3}
-  m_Color: {r: 0.7735849, g: 0.39044145, b: 0.39044145, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 30.599998, y: 30.599998}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
