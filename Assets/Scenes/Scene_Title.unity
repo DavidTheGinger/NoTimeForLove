@@ -921,7 +921,7 @@ GameObject:
   - component: {fileID: 778832971}
   m_Layer: 5
   m_Name: FadeCanvas
-  m_TagString: Untagged
+  m_TagString: SceneTransitionManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -941,6 +941,9 @@ MonoBehaviour:
   FadeDuration: 0.5
   SceneName: Scene_Gameplay
   fader: {fileID: 0}
+  gameSceneName: Scene_Gameplay
+  menuSceneName: Scene_Title
+  endSceneName: Scene_end
 --- !u!114 &778832972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1483,54 +1486,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1323802734310275992, guid: 8867cbed2c929e446ae48386c20dacb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2011034123708147577, guid: 8867cbed2c929e446ae48386c20dacb2, type: 3}
-      propertyPath: startingTracks.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2011034123708147577, guid: 8867cbed2c929e446ae48386c20dacb2, type: 3}
-      propertyPath: startingTracks.Array.data[1]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2011034123708147577, guid: 8867cbed2c929e446ae48386c20dacb2, type: 3}
-      propertyPath: startingTracks.Array.data[2]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2011034123708147577, guid: 8867cbed2c929e446ae48386c20dacb2, type: 3}
-      propertyPath: startingTracks.Array.data[3]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2011034123708147577, guid: 8867cbed2c929e446ae48386c20dacb2, type: 3}
-      propertyPath: startingTracks.Array.data[4]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2011034123708147577, guid: 8867cbed2c929e446ae48386c20dacb2, type: 3}
-      propertyPath: startingTracks.Array.data[5]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2011034123708147577, guid: 8867cbed2c929e446ae48386c20dacb2, type: 3}
-      propertyPath: startingTracks.Array.data[6]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2011034123708147577, guid: 8867cbed2c929e446ae48386c20dacb2, type: 3}
-      propertyPath: startingTracks.Array.data[7]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2011034123708147577, guid: 8867cbed2c929e446ae48386c20dacb2, type: 3}
-      propertyPath: startingTracks.Array.data[8]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2011034123708147577, guid: 8867cbed2c929e446ae48386c20dacb2, type: 3}
-      propertyPath: startingTracks.Array.data[9]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2011034123708147577, guid: 8867cbed2c929e446ae48386c20dacb2, type: 3}
-      propertyPath: startingTracks.Array.data[10]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2011034123708147577, guid: 8867cbed2c929e446ae48386c20dacb2, type: 3}
-      propertyPath: startingTracks.Array.data[11]
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2855814455961369020, guid: 8867cbed2c929e446ae48386c20dacb2, type: 3}
@@ -2213,6 +2168,7 @@ GameObject:
   - component: {fileID: 1410429123}
   - component: {fileID: 1410429122}
   - component: {fileID: 1410429125}
+  - component: {fileID: 1410429126}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -2285,9 +2241,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 778832971}
-        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Quit
+      - m_Target: {fileID: 1410429126}
+        m_TargetAssemblyTypeName: EndOptions, Assembly-CSharp
+        m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2355,6 +2311,18 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 875045d8a8445cf4297d84d2d9d3630b, type: 3}
   - {fileID: 21300000, guid: 30a08768e38651f49bffa52134acc728, type: 3}
   - {fileID: 21300000, guid: 39c6322a67519434dbc9baba0fc39e92, type: 3}
+--- !u!114 &1410429126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410429120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6138cbaa1a2587c49baf250234e78d3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1490178739
 GameObject:
   m_ObjectHideFlags: 0
@@ -3052,6 +3020,7 @@ GameObject:
   - component: {fileID: 2111460088}
   - component: {fileID: 2111460087}
   - component: {fileID: 2111460090}
+  - component: {fileID: 2111460091}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -3124,9 +3093,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 778832971}
-        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Play
+      - m_Target: {fileID: 2111460091}
+        m_TargetAssemblyTypeName: EndOptions, Assembly-CSharp
+        m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3194,3 +3163,15 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 875045d8a8445cf4297d84d2d9d3630b, type: 3}
   - {fileID: 21300000, guid: 30a08768e38651f49bffa52134acc728, type: 3}
   - {fileID: 21300000, guid: 39c6322a67519434dbc9baba0fc39e92, type: 3}
+--- !u!114 &2111460091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111460085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6138cbaa1a2587c49baf250234e78d3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

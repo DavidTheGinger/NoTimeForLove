@@ -11,21 +11,52 @@ public class MenuScript : MonoBehaviour
     private FadeState f = FadeState.Idle;
     private float FadeTime = 0;
     [SerializeField] private float FadeDuration = 0.5f;
-    [SerializeField] private string SceneName;
+    [SerializeField] public string SceneName;
 
     private float Transparency = 0;
     [SerializeField] private Image fader;
 
+    private static MenuScript menuScriptInstance;
+
+    public string gameSceneName;
+    public string menuSceneName;
+    public string endSceneName;
+
     private void Awake()
     {
-        gameObject.SetActive(true);
+        DontDestroyOnLoad(this);
+        if (menuScriptInstance == null)
+        {
+            menuScriptInstance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+
+        if(scene.name == menuSceneName)
+        {
+            SceneName = gameSceneName;
+        }
+        if (scene.name == gameSceneName)
+        {
+            SceneName = endSceneName;
+        }
+        if (scene.name == endSceneName)
+        {
+            SceneName = menuSceneName;
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
         fader = GameObject.FindGameObjectWithTag("FadeMask").GetComponent<Image>();
-        DontDestroyOnLoad(this);
     }
 
     // Update is called once per frame
@@ -72,14 +103,15 @@ public class MenuScript : MonoBehaviour
 
     public void Quit()
     {
+        /*
         if (Application.isEditor)
         {
             UnityEditor.EditorApplication.isPlaying = false;
-        }
+        }*/
         Application.Quit();
     }
     
-    public void Play()
+    public void ChangeScene()
     {
         f = FadeState.FadeOut;
     }

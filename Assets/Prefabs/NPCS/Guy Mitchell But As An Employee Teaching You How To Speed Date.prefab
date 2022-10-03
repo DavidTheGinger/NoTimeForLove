@@ -2266,7 +2266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2197534335699617747}
   m_Layer: 0
-  m_Name: 'Guy Mitchell But As An Employee Teaching You How To Speed Date '
+  m_Name: Guy Mitchell But As An Employee Teaching You How To Speed Date
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2898,7 +2898,9 @@ MonoBehaviour:
   image_displayed: {fileID: 2197534335914348337}
   avgWordTime: 0.09
   tutorial: 1
+  npcState: 0
   reaction: 0
+  minReactionForLove: 1
   tracks: 000000000001010000000000
   talkSounds:
   - {fileID: 8300000, guid: e6e33580528b62746812954028c253e7, type: 3}

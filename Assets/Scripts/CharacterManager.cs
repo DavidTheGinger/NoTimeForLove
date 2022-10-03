@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> npcPrefabs;
+    [SerializeField] private GameObject tutorialNpcPrefab;
 
     [SerializeField] private NPC currentNpcScript;
     private float backgroundSwapTime = 1f;
@@ -16,6 +17,8 @@ public class CharacterManager : MonoBehaviour
     public List<string> npcsLove = new List<string>();
     public List<string> npcsHate = new List<string>();
 
+    private MenuScript menu;
+
     [SerializeField] public bool[] tracks;
 
     bool preFirstNpc = true;
@@ -23,8 +26,11 @@ public class CharacterManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        menu = GameObject.FindGameObjectWithTag("SceneTransitionManager").GetComponent<MenuScript>();
         audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         scoreKeeper = GameObject.FindGameObjectWithTag("ScoreKeeper").GetComponent<ScoreKeeper>();
+        randomizeList(npcPrefabs);
+        npcPrefabs.Insert(0, tutorialNpcPrefab);
         MoveOnFromNpc();
 
     }
@@ -55,6 +61,7 @@ public class CharacterManager : MonoBehaviour
     private void ObserveNpcReaction()
     {
         string name = ParseName(currentNpcScript.gameObject.transform.parent.name);
+        Debug.Log("Recorded " + name + "'s reaction");
 
         switch (currentNpcScript.reaction)
         {
@@ -184,6 +191,8 @@ public class CharacterManager : MonoBehaviour
         scoreKeeper.npcsHate = npcsHate;
         scoreKeeper.npcsLove = npcsLove;
         scoreKeeper.npcsNeutral = npcsNeutral;
+        menu.ChangeScene();
+
     }
 
     IEnumerator FadeBackground(SpriteRenderer spriteIn, SpriteRenderer spriteOut)
@@ -211,6 +220,17 @@ public class CharacterManager : MonoBehaviour
             yield return null;
         }
 
+    }
+
+    private void randomizeList<T>(List<T> list)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            T temp = list[i];
+            int randomIndex = Random.Range(i, list.Count);
+            list[i] = list[randomIndex];
+            list[randomIndex] = temp;
+        }
     }
 
 }

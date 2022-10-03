@@ -170,25 +170,25 @@ public class NPC : MonoBehaviour
 
     public void React(char char_reaction)
     {
-        Debug.Log("I, the NPC, am about to react to '" + char_reaction + "' reaction input");
+        Debug.Log("I, the "+ gameObject.transform.parent.name +", am about to react to '" + char_reaction + "' reaction input");
 
         source.pitch = 1;
         switch (char_reaction)
         {   
             case 'h':
-                Debug.Log("I, the NPC, have reacted happily");
+                //Debug.Log("I, the NPC, have reacted happily");
                 reaction = Reactions.happy;
                 ActivateReactionParticles(happyEmojiParticle);
                 image_displayed.sprite = happyNpcSprite;
                 break;
             case 'n':
-                Debug.Log("I, the NPC, have reacted negativly");
+                //Debug.Log("I, the NPC, have reacted negativly");
                 reaction = Reactions.negative;
                 ActivateReactionParticles(negativeEmojiParticle);
                 image_displayed.sprite = negativeNpcSprite;
                 break;
             default:
-                Debug.Log("I, the NPC, have reacted neutrally");
+                //Debug.Log("I, the NPC, have reacted neutrally");
                 reaction = Reactions.neutral;
                 ActivateReactionParticles(neutralEmojiParticle);
                 image_displayed.sprite = neutralNpcSprite;
