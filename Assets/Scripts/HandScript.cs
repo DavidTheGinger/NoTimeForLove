@@ -48,11 +48,11 @@ public class HandScript : MonoBehaviour
     private void PickupEmoji(GameObject emoji)
     {
         emojiSticker = Instantiate(emoji);
-        emojiSticker.transform.SetParent(canvas.transform, true);
+        emojiSticker.transform.SetParent(canvas.transform);
         emojiSticker.transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, -100);
 
         //emojiSticker.transform.SetParent(gameObject.transform, true);
-        emojiSticker.transform.SetParent(canvas.transform, true);
+        emojiSticker.transform.SetParent(canvas.transform);
 
     }
 
