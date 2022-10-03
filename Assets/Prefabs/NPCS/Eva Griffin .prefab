@@ -2864,8 +2864,8 @@ MonoBehaviour:
   silhouette_removal_speed: 0.8
   npc_movespeed: 5
   talkingDelay: 0.3
-  pitch_min: 1.4
-  pitch_max: 1.6
+  pitch_min: 1.1
+  pitch_max: 1.2
   spawn_point: {fileID: 2197534335727752408}
   chat_target: {fileID: 2197534335971284657}
   end_target: {fileID: 2197534334426095422}
@@ -2878,22 +2878,22 @@ MonoBehaviour:
   minReactionForLove: 0
   tracks: 000000000001000000010000
   talkSounds:
-  - {fileID: 8300000, guid: e6e33580528b62746812954028c253e7, type: 3}
-  - {fileID: 8300000, guid: 66ca90f5a3a6b204b85ff7c33f1d38b9, type: 3}
-  - {fileID: 8300000, guid: e934726e1b4582d4086deab38abe6cea, type: 3}
-  - {fileID: 8300000, guid: a82206e3c586f3d4cb0607e2273b3bdd, type: 3}
-  - {fileID: 8300000, guid: 23852886a39fa3148a277eef41cfc98b, type: 3}
-  - {fileID: 8300000, guid: bee9eca20193e5141818bc3e00080117, type: 3}
-  - {fileID: 8300000, guid: 449f56c3630cc8c44ac7c751729e1a9e, type: 3}
-  - {fileID: 8300000, guid: f598e100738d48942ac16aee1db68f7c, type: 3}
-  - {fileID: 8300000, guid: 25395504e2863c048b8ff7b2def8bd48, type: 3}
-  - {fileID: 8300000, guid: a26f71072cd2e6e4e97e82e0eda099e2, type: 3}
-  - {fileID: 8300000, guid: 73ab71e9483f1d5458e5e2a7f1a622c4, type: 3}
-  - {fileID: 8300000, guid: 9f1903f2dcbb39342946daaf4fe1bafb, type: 3}
-  - {fileID: 8300000, guid: e3d0acc31a08c974f88e24e77a4b27c3, type: 3}
-  - {fileID: 8300000, guid: 646744189303958469106b64d10996ef, type: 3}
-  - {fileID: 8300000, guid: 5deef2ef34d362a4cb4ed56d0865222b, type: 3}
-  - {fileID: 8300000, guid: fadda73a2ec3fe64d93501ea1476e9a1, type: 3}
+  - {fileID: 8300000, guid: 5ba5208af6df99547b8e1ef7d44da88e, type: 3}
+  - {fileID: 8300000, guid: 0765885d23233f84eb549afecbdb94b4, type: 3}
+  - {fileID: 8300000, guid: f56b86cde8b229246a9b0f7ffec10a22, type: 3}
+  - {fileID: 8300000, guid: 969a95c7567ef5e428d82eddf85924a6, type: 3}
+  - {fileID: 8300000, guid: 6319c5767cff0e841a6d17752ad4a48d, type: 3}
+  - {fileID: 8300000, guid: 0a3e0536a0baf6a4cbdb94d6f3aa8391, type: 3}
+  - {fileID: 8300000, guid: ead254c1d4606d648b5c4cf46219c835, type: 3}
+  - {fileID: 8300000, guid: 1fabc5329598933418b00fe09b5b9f27, type: 3}
+  - {fileID: 8300000, guid: 2d4707c5dd5cc86478df943f42c6bdb8, type: 3}
+  - {fileID: 8300000, guid: 09dde7b3f45bb3b4dabbdff4a1579cd3, type: 3}
+  - {fileID: 8300000, guid: 6a49eff9b0cbc4145857e2d0f896b8ac, type: 3}
+  - {fileID: 8300000, guid: b0b2cacb1368d5545ada1fd552296502, type: 3}
+  - {fileID: 8300000, guid: 25f032e59740fbd49b78aff5364a20a1, type: 3}
+  - {fileID: 8300000, guid: 2c5d7cffd7d11b04490255ff3cd6da9d, type: 3}
+  - {fileID: 8300000, guid: 69de1a9becbf17b4080e318523286a14, type: 3}
+  - {fileID: 8300000, guid: ed9b9c6943c25a641aabbd759534f7f3, type: 3}
   wooshSound: {fileID: 8300000, guid: b0ce16348ba573746b22ef94f4b5a4a3, type: 3}
   wooshSoundReversed: {fileID: 8300000, guid: 7f57cddb6799bb5468d03598a694446f, type: 3}
   source: {fileID: 5540109175735081088}
