@@ -605,12 +605,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2869,7 +2869,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubbleManager: {fileID: 2197534335914348338}
-  bubbleBehavior: {fileID: 0}
   talkingSprites:
   - {fileID: 21300000, guid: b03f3f0f2865f2c41a649166a3baaba6, type: 3}
   - {fileID: 21300000, guid: c4c08f7284f431f48b4c52ac159064de, type: 3}
@@ -2893,7 +2892,9 @@ MonoBehaviour:
   image_displayed: {fileID: 2197534335914348337}
   avgWordTime: 0.09
   tutorial: 0
+  npcState: 0
   reaction: 0
+  minReactionForLove: 1
   tracks: 000000000001000000000000
   talkSounds:
   - {fileID: 8300000, guid: e6e33580528b62746812954028c253e7, type: 3}
