@@ -26,7 +26,7 @@ public class BubbleManager : MonoBehaviour
 
     public void initializeData()
     {
-        Debug.Log(this.gameObject.name + " is initializing (in bubble manager)");
+        //Debug.Log(this.gameObject.name + " is initializing (in bubble manager)");
         TextDelaySeconds = 1 / (wpm / 60f) / avg_word_len;
         startTime = Time.time;
         startPositionCamSpace = cam.WorldToScreenPoint(mouth_obj.transform.position);
@@ -52,7 +52,7 @@ public class BubbleManager : MonoBehaviour
 
     private void setInitialBubblePositions()
     {
-        Debug.Log("BubbleManager: setInitialBubblePositions");
+        //Debug.Log("BubbleManager: setInitialBubblePositions");
         int i = 0;
         foreach (BubbleBehavior b in bubble_behaviors)
         {

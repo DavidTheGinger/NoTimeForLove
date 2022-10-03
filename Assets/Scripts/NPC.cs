@@ -45,6 +45,8 @@ public class NPC : MonoBehaviour
 
     [SerializeField] public bool[] tracks;
     [SerializeField] private AudioClip[] talkSounds;
+    [SerializeField] private AudioClip wooshSound;
+    [SerializeField] private AudioClip wooshSoundReversed;
     [SerializeField] private AudioSource source;
     [SerializeField] private float volumeBase = 1;
     [SerializeField] private float volumeFadeSpeed = 10;
@@ -65,6 +67,8 @@ public class NPC : MonoBehaviour
             bubbleBehavior = GameObject.FindGameObjectWithTag("LongestText").GetComponent<BubbleBehavior>();
         }
 
+        source.pitch = 1;
+        source.PlayOneShot(wooshSoundReversed, volumeBase);
         transform.parent.parent = mockSceneParent.transform;
         transform.SetAsFirstSibling();
     }
@@ -142,6 +146,7 @@ public class NPC : MonoBehaviour
 
     public void Leave()
     {
+        source.PlayOneShot(wooshSound, volumeBase);
         npcState = NpcState.leaving;
         setTarget(end_target);
     }
@@ -154,9 +159,10 @@ public class NPC : MonoBehaviour
     public void React(char char_reaction)
     {
         Debug.Log("I, the NPC, am about to react to '" + char_reaction + "' reaction input");
+
+        source.pitch = 1;
         switch (char_reaction)
-        {
-            
+        {   
             case 'h':
                 Debug.Log("I, the NPC, have reacted happily");
                 reaction = Reactions.happy;
@@ -284,15 +290,16 @@ public class NPC : MonoBehaviour
             int index = Random.Range(0, talkSounds.Length);
             source.pitch = Random.Range(pitch_min, pitch_max);
             AudioClip clip = talkSounds[index];
-            source.clip = clip;
+            //source.clip = clip;
             /* play sounds based on when sounds finish
             nextTalkTime = Time.time + source.clip.length / source.pitch;
             source.PlayOneShot(talkSounds[index]);
             */
             //play sounds based on random interval, with interruptions
-            float delay = Mathf.Min(source.clip.length / source.pitch, Random.Range(avgWordTime - (avgWordTime - avgWordTime * wordTimeVarianceMult), avgWordTime * wordTimeVarianceMult));
+            //float delay = Mathf.Min(source.clip.length / source.pitch, Random.Range(avgWordTime - (avgWordTime - avgWordTime * wordTimeVarianceMult), avgWordTime * wordTimeVarianceMult));
+            float delay = Random.Range(avgWordTime - (avgWordTime - avgWordTime * wordTimeVarianceMult), avgWordTime * wordTimeVarianceMult);
             nextTalkTime = Time.time + delay;
-            if(Random.Range(0, 2) == 1) { source.pitch *= -1; }
+            //if(Random.Range(0, 2) == 1) { source.pitch *= -1; }
             source.PlayOneShot(talkSounds[index], volumeBase);
             //coroutine to QUICKLY fade out each audio clip to avoid audio popping
             //StartCoroutine(PlayVoice(index, delay));

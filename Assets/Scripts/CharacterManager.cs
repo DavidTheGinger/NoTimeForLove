@@ -10,6 +10,7 @@ public class CharacterManager : MonoBehaviour
     [SerializeField] private float backgroundSwapTime = 1f;
     [SerializeField] private List<SpriteRenderer> bgSpriteRenderers;
     private AudioManager audioManager;
+    private ScoreKeeper scoreKeeper;
 
     public List<string> npcsNeutral = new List<string>();
     public List<string> npcsLove = new List<string>();
@@ -21,6 +22,7 @@ public class CharacterManager : MonoBehaviour
     void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+        scoreKeeper = GameObject.FindGameObjectWithTag("ScoreKeeper").GetComponent<ScoreKeeper>();
         MoveOnFromNpc();
 
     }
@@ -92,6 +94,7 @@ public class CharacterManager : MonoBehaviour
     }
     private void TransitionToEndScreen()
     {
+        /*
         foreach(string name in npcsNeutral)
         {
             Debug.Log("Neutral towards you: " + name);
@@ -104,6 +107,11 @@ public class CharacterManager : MonoBehaviour
         {
             Debug.Log("Hate towards you: " + name);
         }
+        */
+
+        scoreKeeper.npcsHate = npcsHate;
+        scoreKeeper.npcsLove = npcsLove;
+        scoreKeeper.npcsNeutral = npcsNeutral;
     }
 
     IEnumerator FadeBackground(SpriteRenderer spriteIn, SpriteRenderer spriteOut)

@@ -10,8 +10,19 @@ public class AudioManager : MonoBehaviour
     public float baseClipVolume = 1.0f;
     public float audioFadeSpeed = 1f;
     // Start is called before the first frame update
+    private static AudioManager audioManagerInstance;
     void Awake()
     {
+
+        DontDestroyOnLoad(this);
+        if (audioManagerInstance == null)
+        {
+            audioManagerInstance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         InitializeAudioSources();
         
     }
@@ -42,6 +53,7 @@ public class AudioManager : MonoBehaviour
     {
         for (int i = 0; i < tracks.Length; i++)
         {
+            Debug.Log("Track #: " + i + " is set to: " + tracks[i]);
             if (tracks[i]) {
                 StartCoroutine(FadeAudioIO(i, baseClipVolume));
             }
@@ -55,24 +67,32 @@ public class AudioManager : MonoBehaviour
     IEnumerator FadeAudioIO(int i, float targetVol)
     {
         //if target is less than current volume
-        while (audioSources[i].volume > targetVol)
+        if(audioSources[i].volume > targetVol)
         {
-            audioSources[i].volume -= Time.deltaTime * audioFadeSpeed;
-            if (audioSources[i].volume < targetVol)
+            while (audioSources[i].volume > targetVol)
             {
-                audioSources[i].volume = targetVol;
+                audioSources[i].volume -= Time.deltaTime * audioFadeSpeed;
+                if (audioSources[i].volume < targetVol)
+                {
+                    audioSources[i].volume = targetVol;
+                }
+                yield return null;
             }
-            yield return null;
         }
-        //if target is greater than current volume
-        while (audioSources[i].volume > targetVol)
+        else
         {
-            audioSources[i].volume += Time.deltaTime * audioFadeSpeed;
-            if (audioSources[i].volume > targetVol)
+            //if target is greater than current volume
+            while (audioSources[i].volume < targetVol)
             {
-                audioSources[i].volume = targetVol;
+                audioSources[i].volume += Time.deltaTime * audioFadeSpeed;
+                if (audioSources[i].volume < targetVol)
+                {
+                    audioSources[i].volume = targetVol;
+                }
+                yield return null;
             }
-            yield return null;
         }
+        
+        
     }
 }

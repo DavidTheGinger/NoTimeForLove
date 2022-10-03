@@ -2259,7 +2259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2197534335699617747}
   m_Layer: 0
-  m_Name: NPCPrefab
+  m_Name: 'NPC BASE PREFAB '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2882,16 +2882,17 @@ MonoBehaviour:
   npc_movespeed: 5
   talkingDelay: 0.3
   pitch_min: 1
-  pitch_max: 1
+  pitch_max: 3.72
   spawn_point: {fileID: 2197534335727752408}
   chat_target: {fileID: 2197534335971284657}
   end_target: {fileID: 2197534334426095422}
   particles: {fileID: 6687540611628009291}
   image_displayed: {fileID: 2197534335914348337}
-  avgWordTime: 0.2
+  avgWordTime: 0.09
   tutorial: 1
   personalBackground: {fileID: 21300000, guid: b9182ab6ae4f6db42b03786818b1a265, type: 3}
-  tracks: 000000000000000000000000
+  reaction: 0
+  tracks: 000000000001010000000000
   talkSounds:
   - {fileID: 8300000, guid: e6e33580528b62746812954028c253e7, type: 3}
   - {fileID: 8300000, guid: 66ca90f5a3a6b204b85ff7c33f1d38b9, type: 3}
@@ -2909,6 +2910,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 646744189303958469106b64d10996ef, type: 3}
   - {fileID: 8300000, guid: 5deef2ef34d362a4cb4ed56d0865222b, type: 3}
   - {fileID: 8300000, guid: fadda73a2ec3fe64d93501ea1476e9a1, type: 3}
+  wooshSound: {fileID: 8300000, guid: b0ce16348ba573746b22ef94f4b5a4a3, type: 3}
+  wooshSoundReversed: {fileID: 8300000, guid: 7f57cddb6799bb5468d03598a694446f, type: 3}
   source: {fileID: 5540109175735081088}
   volumeBase: 1
   volumeFadeSpeed: 10
@@ -3731,9 +3734,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8170415296151426658, guid: b5912ec4950d7344ca3acb226bb683ff, type: 3}
+      propertyPath: pitch_max
+      value: 3.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170415296151426658, guid: b5912ec4950d7344ca3acb226bb683ff, type: 3}
       propertyPath: end_target
       value: 
       objectReference: {fileID: 2197534334426095422}
+    - target: {fileID: 8170415296151426658, guid: b5912ec4950d7344ca3acb226bb683ff, type: 3}
+      propertyPath: avgWordTime
+      value: 0.09
+      objectReference: {fileID: 0}
     - target: {fileID: 8170415296151426658, guid: b5912ec4950d7344ca3acb226bb683ff, type: 3}
       propertyPath: chat_target
       value: 
@@ -3745,6 +3756,14 @@ PrefabInstance:
     - target: {fileID: 8170415296151426658, guid: b5912ec4950d7344ca3acb226bb683ff, type: 3}
       propertyPath: tracks.Array.size
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170415296151426658, guid: b5912ec4950d7344ca3acb226bb683ff, type: 3}
+      propertyPath: tracks.Array.data[5]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170415296151426658, guid: b5912ec4950d7344ca3acb226bb683ff, type: 3}
+      propertyPath: tracks.Array.data[6]
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8170415296151426658, guid: b5912ec4950d7344ca3acb226bb683ff, type: 3}
       propertyPath: talkSounds.Array.size

@@ -72,28 +72,28 @@ public class HandScript : MonoBehaviour
         CheckIfAlreadyHolding();
         emojiHeld = EmojiHeld.happy;
         PickupEmoji(emojiHappyPrefab);
-        Debug.Log("Current Held Emoji sticker obj: " + emojiSticker.name);
+        //Debug.Log("Current Held Emoji sticker obj: " + emojiSticker.name);
     }
     public void HoldLust()
     {
         CheckIfAlreadyHolding();
         emojiHeld = EmojiHeld.lust;
         PickupEmoji(emojiLustPrefab);
-        Debug.Log("Current Held Emoji sticker obj: " + emojiSticker.name);
+        //Debug.Log("Current Held Emoji sticker obj: " + emojiSticker.name);
     }
     public void HoldSad()
     {
         CheckIfAlreadyHolding();
         emojiHeld = EmojiHeld.sad;
         PickupEmoji(emojiSadPrefab);
-        Debug.Log("Current Held Emoji sticker obj: " + emojiSticker.name);
+        //Debug.Log("Current Held Emoji sticker obj: " + emojiSticker.name);
     }
     public void HoldAngry()
     {
         CheckIfAlreadyHolding();
         emojiHeld = EmojiHeld.angry;
         PickupEmoji(emojiAngryPrefab);
-        Debug.Log("Current Held Emoji sticker obj: " + emojiSticker.name);
+        //Debug.Log("Current Held Emoji sticker obj: " + emojiSticker.name);
     }
 
     public void EmptyHand()

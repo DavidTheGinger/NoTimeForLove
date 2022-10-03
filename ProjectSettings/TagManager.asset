@@ -9,6 +9,7 @@ TagManager:
   - CharacterManager
   - FadeMask
   - MockSceneParent
+  - ScoreKeeper
   layers:
   - Default
   - TransparentFX
