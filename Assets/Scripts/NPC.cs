@@ -15,6 +15,7 @@ public class NPC : MonoBehaviour
     [SerializeField] private Sprite happyEmojiParticle;
     [SerializeField] private Sprite negativeEmojiParticle;
     [SerializeField] private SpriteRenderer silhouette;
+    public Sprite personalBackground;
     [SerializeField] private float silhouette_removal_speed = 1;
     [SerializeField] private float npc_movespeed = 5;
     [SerializeField] private float talkingDelay = .3f;
@@ -35,7 +36,6 @@ public class NPC : MonoBehaviour
 
     [SerializeField] private bool tutorial = false;
 
-    public Sprite personalBackground;
 
     public enum NpcState { entering, talking, leaving, waiting}
     NpcState npcState = NpcState.entering;

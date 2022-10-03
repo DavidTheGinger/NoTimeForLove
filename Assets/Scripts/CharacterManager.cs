@@ -7,7 +7,7 @@ public class CharacterManager : MonoBehaviour
     [SerializeField] private List<GameObject> npcPrefabs;
 
     [SerializeField] private NPC currentNpcScript;
-    [SerializeField] private float backgroundSwapTime = 1f;
+    private float backgroundSwapTime = 1f;
     [SerializeField] private List<SpriteRenderer> bgSpriteRenderers;
     private AudioManager audioManager;
     private ScoreKeeper scoreKeeper;
@@ -82,7 +82,7 @@ public class CharacterManager : MonoBehaviour
     private void SwapBackgrounds()
     {
 
-        if(bgSpriteRenderers[0].color.a < 175)
+        if(bgSpriteRenderers[0].color.a < .5f)
         {
             StartCoroutine(FadeBackground(bgSpriteRenderers[0], bgSpriteRenderers[1]));
         }
@@ -117,12 +117,12 @@ public class CharacterManager : MonoBehaviour
     IEnumerator FadeBackground(SpriteRenderer spriteIn, SpriteRenderer spriteOut)
     {
         spriteIn.sprite = currentNpcScript.personalBackground;
-        while (spriteIn.color.a < 255)
+        while (spriteIn.color.a < 1)
         {
             float spriteIn_a = spriteIn.color.a + Time.deltaTime * backgroundSwapTime;
-            if (spriteIn_a > 255)
+            if (spriteIn_a > 1)
             {
-                spriteIn_a = 255;
+                spriteIn_a = 1;
             }
             spriteIn.color = new Color(spriteIn.color.r, spriteIn.color.g, spriteIn.color.b, spriteIn_a);
             yield return null;
